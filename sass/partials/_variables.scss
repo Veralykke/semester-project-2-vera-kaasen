@@ -1,0 +1,12 @@
+$font-primary: "Open Sans", sans-serif;
+$font-headings: "PT Sans", sans-serif;
+$font-details: "Ubuntu", sans-serif;
+
+
+$colours: ( 
+brown: #735347
+);
+
+@function getColour($colour) {
+    @return map-get ($colours, $colour);
+}
