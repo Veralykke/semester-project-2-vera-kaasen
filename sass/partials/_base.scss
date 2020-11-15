@@ -1,9 +1,14 @@
-* {
-    box-sizing: border-box;
-}
+
+    * {
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+        font-size: 16px;
+    }
+
 
 body {
-    background: red;
+    background-color: getColour(white);
     margin: 0;
-    font-family: ;
+    color: getColour(black);
 }
