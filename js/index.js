@@ -54,7 +54,6 @@ function HTML(json){
 
 
 
-
 /*
 export const featuredproducts = document.querySelector(".featured-products");
 
