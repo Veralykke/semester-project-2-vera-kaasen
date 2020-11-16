@@ -74,7 +74,10 @@ nav li a {
   padding: 10px 0;
   text-decoration: none;
   font-size: 1em;
-  width: 150px;
+  width: 352px;
+  height: 70px;
+  text-align: center;
+  font-family: "ubuntu", sans-serif;
 }
 
 nav li a:hover:not(.active) {
