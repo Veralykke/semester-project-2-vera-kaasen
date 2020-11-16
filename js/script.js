@@ -8,6 +8,11 @@ Get the Passed ID to fetch from API to get the data for that Product
 import {url} from "./components/api.js";
 import displayMessage from "./components/common/displayMessage.js";
 import {hamburgerMenu} from "./hamburger.js";
+import { modal } from "./admin.js";
+
+/*import { async function } from "./index.js";
+import { HTML(json) } from "./index.js";
+import { featuredUrl } from "./index.js";*/
 
 
 

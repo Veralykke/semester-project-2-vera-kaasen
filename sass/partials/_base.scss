@@ -12,3 +12,25 @@ body {
     margin: 0;
     color: getColour(black);
 }
+
+h1 {
+    font-size: 1.5em;
+    margin-top: 45px;
+    margin-left: 59px;
+    color: getColour(black);
+}
+
+h4 {
+    margin-bottom: 15px;
+    margin-left: 29px;
+    font-size: 1.5em;
+    font-family: $font-headings;
+    color: getColour(black);
+}
+
+p {
+    margin-bottom: 30px;
+    margin-left: 29px;
+    font-family: $font-headings;
+    color: getColour(black);
+}

@@ -4,9 +4,9 @@ import {hamburgerMenu} from "./hamburger.js";
 
 
 /*Adding HTML(json) function here*/
-const featuredUrl = url + "products";
+ const featuredUrl = url + "products";
 
-(async function() {
+ (async function() {
     try {
         const response = await fetch(featuredUrl);
         const json = await response.json();
@@ -19,7 +19,7 @@ const featuredUrl = url + "products";
 })();
 
 /* Makes HTML for the Site from JSON */
-function HTML(json){
+    function HTML(json){
     const container = document.querySelector(".featured-container");
     container.innerHTML = "";
 
@@ -28,14 +28,10 @@ function HTML(json){
         <a class="product" href="detail.html?id=${product.id}">
             <h4>${product.title}</h4>
             <p>Price: ${product.price}</p>
-            <img src="http://localhost:1337${product.image.url}" alt="">
+            <img class="product-images" src="http://localhost:1337${product.image.url}" alt="product-images">
         </a>`;
     });
 }
-
-
-
-
 
 /*
 export const featuredproducts = document.querySelector(".featured-products");

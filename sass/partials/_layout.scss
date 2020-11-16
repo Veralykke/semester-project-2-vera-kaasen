@@ -1,18 +1,5 @@
 /*SAMLE ILAG*/
-h1 {
-    margin-left: 45px;
-    font-size: 1.5em;
-    margin-top: 45px;
-}
-h4 {
-    margin-bottom: 15px;
-    margin-left: 29px;
-}
 
-p {
-    margin-bottom: 30px;
-    margin-left: 29px;
-}
 
 /*SETT SAMMEN*/
 .featured-container {
@@ -30,7 +17,8 @@ p {
     justify-content: space-between;
 }
  /*SETT SAMMEN*/
-img {
+
+.product-images {
     justify-content: space-around;
     border: 1px solid getColour(primary);
     width: 250px;
@@ -39,7 +27,6 @@ img {
     margin-left: 29px;
     box-shadow: 0px 0px 26px -2px getColour(secondary);
 }
-
 .container {
     margin: 0 auto;
     max-width: 1100px;
@@ -48,6 +35,12 @@ img {
     justify-content: space-around;
 }
 
+.search-box {
+    width: 150px;
+    height: auto;
+    border-radius: 6px;
+    margin-left: 58px;
+}
 .loader {
     border-radius: 50%;
     width: 120px;

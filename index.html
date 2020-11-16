@@ -14,7 +14,9 @@
 
 <body>
     <header>
-        <a href="/" class="logo">Sass</a>
+        <a href="index.html">
+            <img src="./img/logo-two.png" class="logo" alt="logo">
+        </a>
         <nav class="menu">
             <span class="hamburger">
                 <span class="bar one"></span>
@@ -32,13 +34,44 @@
     </header>
 
     <main>
+        <button onclick="document.getElementById('formId').style.display='block'" style=" width: auto;">Login</button>
+
+        <div id="formId" class="modal;">
+
+            <form class="modal-content animate" action="/action_page.php" method="post">
+                <div class="imageContainer">
+                    <span onclick="document.getElementById('formId').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="form-container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit" Login></button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+
+                <div class="form-container" style="background-color: white;">
+                    <button type="button" onclick="document.getElementById('forId').style.display='none'"
+                        class="canselBtn">Cansel</button>
+                    <span class="psw">Forgot <a href"#">Password</a></span>
+                </div>
+            </form>
+        </div>
+
         <div class="cover-image"></div>
         <!--<div class="loader"></div>-->
         <h1>Customers favourites</h1>
         <div class="container">
             <div class="featured-container"></div>
         </div>
-
     </main>
 
     <footer>
