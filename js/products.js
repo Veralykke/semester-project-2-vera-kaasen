@@ -4,6 +4,7 @@ import {url} from "./components/api.js";
 
 /*Adding HTML(json) function here*/
 const productsUrl = url + "products";
+const search = document.querySelector(".search-box");
 
 (async function() {
     try {
@@ -37,6 +38,24 @@ function HTML(json) {
     });
 }
 
+/*SEARCH BOX*/
+search.onkeyup = function () {
+    /*console.log(event);*/
+
+    const searchValue = event.target.value.trim().toLowerCase();
+
+    const filteredProducts = product.filter(function(product) {
+        if(product.full_name.toLowerCase().startsWith(searchValue)) {
+            return true;
+        }
+    });
+
+    console.log(filteredProducts);
+};
+/*SEARCH BOX*/
+
+
+/*ADD TO CART -LEGG PÅ DETALJ PAGE-*/
 function addCart(productId){
 
     /* We get the data attributes from the product ID */
@@ -59,3 +78,6 @@ function addCart(productId){
 }
 
 window.addCart = addCart;
+
+
+
