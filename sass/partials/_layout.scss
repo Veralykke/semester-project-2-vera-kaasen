@@ -2,6 +2,9 @@
 
 
 /*SETT SAMMEN*/
+.cover-image{
+    height: 250px;
+}
 .featured-container {
     /*display: flex;*/
     padding: 1rem;
@@ -17,7 +20,9 @@
     justify-content: space-between;
 }
  /*SETT SAMMEN*/
-
+.product{
+    text-decoration: none;
+}
 .product-images {
     justify-content: space-around;
     border: 1px solid getColour(primary);

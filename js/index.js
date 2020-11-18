@@ -1,6 +1,23 @@
 import {url} from "./components/api.js";
 import displayMessage from "./components/common/displayMessage.js";
 import {hamburgerMenu} from "./hamburger.js";
+import validateForm from "./components/common/doLogin.js";
+
+
+/* Get hero-banner image */
+const heroBannerUrl = url + "home";
+(async function() {
+    try {
+        const response = await fetch(heroBannerUrl);
+        const json = await response.json();
+
+        document.querySelector(".cover-image").src =`http://localhost:1337${json.hero_banner.url}`;
+    }
+    catch (error) {
+        console.log(error);
+        displayMessage("error", error, ".featured-container");
+    }
+})();
 
 
 /*Adding HTML(json) function here*/
@@ -24,35 +41,23 @@ import {hamburgerMenu} from "./hamburger.js";
     container.innerHTML = "";
 
     json.forEach(function (product) {
-        container.innerHTML += `
-        <a class="product" href="detail.html?id=${product.id}">
-            <h4>${product.title}</h4>
-            <p>Price: ${product.price}</p>
-            <img class="product-images" src="http://localhost:1337${product.image.url}" alt="product-images">
-        </a>`;
+        /* If featured product, render it, else skip it */
+        if(product.featured ){
+            container.innerHTML += `
+            <a class="product" href="detail.html?id=${product.id}">
+                <h4>${product.title}</h4>
+                <p>Price: ${product.price}</p>
+                <img class="product-images" src="http://localhost:1337${product.image.url}" alt="product-images">
+            </a>`;
+        }
     });
 }
 
-/*
-export const featuredproducts = document.querySelector(".featured-products");
+/* Login button to toggle show or hide login form */
+const loginButton = document.querySelector(".login-button-toggle");
+loginButton.addEventListener("click", loginForm);
 
-let html = "";
-
-for (let i = 0; i < json.length; i++) {
-    console.log(i);
-
-    if (json[i].featured === true) {
-        featuredProducts.style.display ="block";
-    } else {
-        featuredContainer.style.display ="none";
-    }
-
-    html += `<h2>Some of our products</h2>
-    <p>Do not miss these offers</p>
-    <img src"./strapi-api/public${json[i].image.url}" />
-    <p>${json[i].title}</p>
-    <a jref="#">More </a>`;
-
+function loginForm(){
+    document.querySelector("#formId").classList.toggle("login-hidden");
 }
 
-featuredProducts.innerHTML = html;*/

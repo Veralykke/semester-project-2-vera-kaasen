@@ -127,6 +127,10 @@ nav li a.active {
 
 /*SAMLE ILAG*/
 /*SETT SAMMEN*/
+.cover-image {
+  height: 250px;
+}
+
 .featured-container {
   /*display: flex;*/
   padding: 1rem;
@@ -148,6 +152,10 @@ nav li a.active {
 }
 
 /*SETT SAMMEN*/
+.product {
+  text-decoration: none;
+}
+
 .product-images {
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -234,7 +242,7 @@ footer .text-footer {
 }
 
 button {
-  background-color: getColur(accent);
+  background-color: #257363;
   color: #fcfcfc;
   margin: 8px 0;
   padding: 14px 20px;
@@ -250,7 +258,7 @@ button button:hover {
 button .cancelbtn {
   padding: 10px 18px;
   width: auto;
-  background-color: #b9aaab;
+  background-color: #257363;
 }
 
 .imageContainer {
@@ -298,6 +306,47 @@ img.avatar {
   font-weight: bold;
 }
 
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 300px) {
+  span.spw {
+    display: block;
+    float: none;
+  }
+  .canselbtn {
+    width: 100%;
+  }
+}
+
 input[type=text], input[type=password] {
   padding: 12px 20px;
   width: 100%;
@@ -307,4 +356,10 @@ input[type=text], input[type=password] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+/* Credits:
+ Icons made by Smashicons at https://www.flaticon.com/
+ 
+ 
+ */
 /*# sourceMappingURL=style.css.map */

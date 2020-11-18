@@ -1,5 +1,5 @@
 button {
-    background-color: getColur(accent);
+    background-color: getColour(accent);
     color: getColour(white);
     margin: 8px 0;
     padding: 14px 20px; 
@@ -14,7 +14,7 @@ button:hover {
 .cancelbtn {
     padding: 10px 18px;
     width: auto;
-    background-color: getColour(secondary);
+    background-color: getColour(accent);
 }
 
 }
@@ -63,6 +63,38 @@ img.avatar {
     font-size: 35px;
     font-weight: bold;
 }
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+    span.spw {
+        display: block;
+        float: none;
+    }
+    .canselbtn {
+        width: 100%;
+    }
+}
+
 
 
 input[type=text], input[type=password] {

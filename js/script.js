@@ -5,15 +5,13 @@ Get the Passed ID to fetch from API to get the data for that Product
 
 /*import { featuredContainer } from "./components/";*/
 
+import { doLogin } from "./components/common/storage.js";
+import { formSubmit } from "./components/common/admin.js"
+import { modal } from "./admin.js";
+
 import {url} from "./components/api.js";
 import displayMessage from "./components/common/displayMessage.js";
 import {hamburgerMenu} from "./hamburger.js";
-import { modal } from "./admin.js";
-
-/*import { async function } from "./index.js";
-import { HTML(json) } from "./index.js";
-import { featuredUrl } from "./index.js";*/
-
-
+import validateForm from "./components/common/doLogin.js";
 
 

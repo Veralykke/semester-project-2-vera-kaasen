@@ -34,25 +34,37 @@
     </header>
 
     <main>
-        <button onclick="document.getElementById('formId').style.display='block'" style=" width: auto;">Login</button>
+        <!-- Move to style, not here -->
+        <style>
+            .login-hidden {
+                display: none;
+            }
 
-        <div id="formId" class="modal;">
+            .login-button-toggle {
+                width: auto;
+            }
+        </style>
+        <button class="login-button-toggle">Login</button>
 
-            <form class="modal-content animate" action="/action_page.php" method="post">
+        <div id="formId" class="login-hidden">
+
+            <form class="modal-content animate" method="POST">
                 <div class="imageContainer">
                     <span onclick="document.getElementById('formId').style.display='none'" class="close"
                         title="Close Modal">&times;</span>
-                    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+                    <img src="img/avatar.png" alt="Avatar" class="avatar">
                 </div>
 
                 <div class="form-container">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    <label for="username"><b>Username</b></label>
+                    <input type="text" id="username" placeholder="Enter Username" name="username" required>
+                    <span class="usernameError error-text">Invalid Username</span>
 
                     <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+                    <span class="passwordError error-text">Invalid Password</span>
 
-                    <button type="submit" Login></button>
+                    <button class="login-button" type="submit" Login> Login</button>
                     <label>
                         <input type="checkbox" checked="checked" name="remember"> Remember me
                     </label>
@@ -60,13 +72,13 @@
 
                 <div class="form-container" style="background-color: white;">
                     <button type="button" onclick="document.getElementById('forId').style.display='none'"
-                        class="canselBtn">Cansel</button>
-                    <span class="psw">Forgot <a href"#">Password</a></span>
+                        class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href"#">Password?</a></span>
                 </div>
             </form>
         </div>
 
-        <div class="cover-image"></div>
+        <img src="" class="cover-image" alt="hero-banner">
         <!--<div class="loader"></div>-->
         <h1>Customers favourites</h1>
         <div class="container">
