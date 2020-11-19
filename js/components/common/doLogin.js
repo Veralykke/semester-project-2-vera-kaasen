@@ -1,4 +1,4 @@
-const username = document.querySelector("#username");
+/*const username = document.querySelector("#username");
 const usernameError = document.querySelector(".usernameError");
 
 const password = document.querySelector("#password");
@@ -39,6 +39,7 @@ export default function validateForm() {
         return true;
     }
 }
+*/
 
 
 
@@ -48,5 +49,3 @@ export default function validateForm() {
 
 
 
-
-/*FRA OPPGAVEN I JS2 MA2 */

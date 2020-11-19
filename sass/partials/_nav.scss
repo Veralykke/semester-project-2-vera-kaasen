@@ -44,22 +44,23 @@ nav {
         font-size: 1em;
         width: 352px;
         height: 70px;
-        text-align: center;
         font-family: $font-details;
     }
     
     li a:hover:not(.active) {
-        background-color: #ddd;
+        background-color: getColour(brown);
     }
-    
+   
     li a.active {
         color: white;
-        background-color:#604242;
+        background-color: getColour(brown);
         padding-right: 24px;
     }
 
 }
-
+.login-button-toggle {
+font-size: 1em; 
+}
 .logo {
     font-size: 1.1em;
     margin-left: 24px;

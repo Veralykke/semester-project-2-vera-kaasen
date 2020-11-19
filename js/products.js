@@ -1,12 +1,59 @@
 import {hamburgerMenu} from "./hamburger.js";
 import {url} from "./components/api.js";
+import { renderProducts } from "./components/common/renderProducts.js";
+import { searchProducts } from "./components/common/searchProducts.js";
+import { displayMessage } from "./components/common/displayMessage.js";
 
+const productsUrl = url  + "products";
+
+
+async function getProducts() {
+    
+    try {
+        const response = await fetch(productsUrl);
+        const json = await response.json();
+      
+        console.log(json.data);
+
+        const products = json.data;
+
+        renderProducts(products);
+        searchProducts(products);
+    }catch (error) {
+        console.log(error);
+        displayMessage("error", error, ".product-container");
+    }
+}
+
+getProducts();
+
+/*HVORDAN ADDE BUTTON TIL DETALJPAGE?? OG PÅ HVILKEN JS SIDE?
+const poroductByID = product.find.(findProduct);
+
+function findProduct(product) {
+    if(product.id === 1) {
+        return true;
+    }
+}
+/*HVORDAN ADDE BUTTON TIL DETALJPAGE??
+
+
+
+
+
+
+
+
+
+
+
+/*NYERE API VERSjON PLUSS ADDING TO CART*/
 
 /*Adding HTML(json) function here*/
-const productsUrl = url + "products";
-const search = document.querySelector(".search-box");
+/*const productsUrl = url + "products";
 
 (async function() {
+    
     try {
         const response = await fetch(productsUrl);
         const json = await response.json();
@@ -19,7 +66,7 @@ const search = document.querySelector(".search-box");
 })();
 
 /* Makes HTML for the Site from JSON */
-function HTML(json) {
+/*function HTML(json) {
     const container = document.querySelector(".product-container");
     container.innerHTML = "";
 
@@ -33,51 +80,8 @@ function HTML(json) {
             <h4>${product.title}</h4>
             <p>Price: ${product.price}</p>
             <img class="product-images" src="http://localhost:1337${product.image.url}" alt="product-images">
-            <button onclick = "addCart(${product.id})">Add to Cart</button>
+            <button onclick class= "add-to-cart" = "addCart(${product.id})">More</button>
         </div>`;
     });
-}
-
-/*SEARCH BOX*/
-search.onkeyup = function () {
-    /*console.log(event);*/
-
-    const searchValue = event.target.value.trim().toLowerCase();
-
-    const filteredProducts = product.filter(function(product) {
-        if(product.full_name.toLowerCase().startsWith(searchValue)) {
-            return true;
-        }
-    });
-
-    console.log(filteredProducts);
-};
-/*SEARCH BOX*/
-
-
-/*ADD TO CART -LEGG PÅ DETALJ PAGE-*/
-function addCart(productId){
-
-    /* We get the data attributes from the product ID */
-    const product = document.querySelector("#product-"+productId).dataset;
-
-    /* We store the current product to local storage as a string (JSON.stringufy) */
-    localStorage.setItem("product", JSON.stringify(product));
-
-    /* We parse the localStorage data to JSON data and can use it */
-    const parsedData = JSON.parse(localStorage.getItem("product"));
-
-    /* Here we display the product title */
-    console.log(parsedData.title);
-
-    /* 
-        When we finish the function and make it add more products to the cart.
-        It will be an array of objects, and we do an forEach loop on all producs and render it
-        Just like we have in the 'fetch' to show the HTML (or as above)
-     */
-}
-
-window.addCart = addCart;
-
-
+}*/
 

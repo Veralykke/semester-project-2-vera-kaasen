@@ -12,10 +12,12 @@ body {
 }
 
 h1 {
-  font-size: 1.5em;
+  font-size: 1.8em;
   margin-top: 45px;
   margin-left: 59px;
   color: #191919;
+  font-family: "pt Sans", sans-serif;
+  margin-bottom: 38px;
 }
 
 h4 {
@@ -29,8 +31,35 @@ h4 {
 p {
   margin-bottom: 30px;
   margin-left: 29px;
+  font-size: 1.3em;
+  font-weight: bold;
   font-family: "pt Sans", sans-serif;
   color: #191919;
+}
+
+.add-to-cart {
+  width: 251px;
+  height: 45px;
+  text-align: center;
+  margin-left: 30px;
+  margin-bottom: 105px;
+}
+
+.message.error {
+  color: red;
+  border-color: red;
+}
+
+.message.success {
+  color: green;
+  border-color: green;
+}
+
+.message {
+  border: 1px solid #b9aaab;
+  color: #d9d2d5;
+  margin-top: 1rem;
+  pad: 1rem;
 }
 
 nav {
@@ -98,18 +127,21 @@ nav li a {
   font-size: 1em;
   width: 352px;
   height: 70px;
-  text-align: center;
   font-family: "ubuntu", sans-serif;
 }
 
 nav li a:hover:not(.active) {
-  background-color: #ddd;
+  background-color: #83654A;
 }
 
 nav li a.active {
   color: white;
-  background-color: #604242;
+  background-color: #83654A;
   padding-right: 24px;
+}
+
+.login-button-toggle {
+  font-size: 1em;
 }
 
 .logo {
@@ -125,7 +157,6 @@ nav li a.active {
   width: auto;
 }
 
-/*SAMLE ILAG*/
 /*SETT SAMMEN*/
 .cover-image {
   height: 250px;
@@ -139,6 +170,15 @@ nav li a.active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.product-container {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 1rem;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .detail-container {
@@ -162,7 +202,7 @@ nav li a.active {
   border: 1px solid #d9d2d5;
   width: 250px;
   height: auto;
-  margin-bottom: 40px;
+  margin-bottom: 14px;
   margin-left: 29px;
   -webkit-box-shadow: 0px 0px 26px -2px #b9aaab;
           box-shadow: 0px 0px 26px -2px #b9aaab;
@@ -221,24 +261,23 @@ nav li a.active {
   }
 }
 
-/*COVER*/
 /*FOOTER*/
 footer {
   height: 187px;
   margin-top: 144px;
   width: 100%;
   background-color: #83654A;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "open sans", sans-serif;
   font-size: 1.2em;
   text-align: center;
-  position: fixed;
   left: 0;
 }
 
 footer .text-footer {
-  font-size: 1.0em;
+  font-size: 0.8em;
   color: white;
   font-weight: 500;
+  padding-top: 45px;
 }
 
 button {

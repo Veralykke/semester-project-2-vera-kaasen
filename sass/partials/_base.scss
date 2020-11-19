@@ -14,10 +14,12 @@ body {
 }
 
 h1 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin-top: 45px;
     margin-left: 59px;
     color: getColour(black);
+    font-family: $font-headings;
+    margin-bottom: 38px;
 }
 
 h4 {
@@ -31,6 +33,33 @@ h4 {
 p {
     margin-bottom: 30px;
     margin-left: 29px;
+    font-size: 1.3em;
+    font-weight: bold;
     font-family: $font-headings;
     color: getColour(black);
+}
+
+.add-to-cart {
+    width: 251px;
+    height: 45px;
+    text-align: center;
+    margin-left: 30px;
+    margin-bottom: 105px;
+}
+
+.message.error {
+    color: red;
+    border-color: red;
+}
+
+.message.success {
+    color: green;
+    border-color: green;
+}
+
+.message {
+    border: 1px solid getColour(secondary);
+    color: getColour(primary);
+    margin-top: 1rem;
+    pad: 1rem;
 }
