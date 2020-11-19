@@ -1,3 +1,25 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*NY FORBEDRET MÅTE*/
 /*async function doLogin(username, password) {
 
     const url = "http://localhost:1337/";
