@@ -1,12 +1,27 @@
 import { url } from "./components/api.js";
 import displayMessage from "./components/common/displayMessage.js";
+import { getExistingFavs } from "./components/common/storage.js";
+
 
 const detailContainer = document.querySelector(".detail-container");
 
-const productDetailUrl = url + "products/" + id;
+const productDetailUrl = url + "products/" + id;     //<----------??????????????????????????????+
 
+const addedproducts = getExistingFavs();
 
-products.forEach((product) => {
+products.forEach((product) => {  
+
+let cssClass = "far";
+
+const doesObjectExist = favourites.find(function(fav) {
+    console.log(fav)
+
+    return fav.id === product.id;
+})
+
+console.log(doesObjectExist);
+
+{
     detailContainer.innerHTML += `
                                 <h1>${product.title}</h1>
                                 <p>Description:${product.description}</p>
@@ -34,35 +49,28 @@ function handleClick() {
 
    const currentFavs = getExistingFavs();
    
-   const Product = { id: id, name: name};
+   const productExist = currentFavs.find(function(fav) {
+       return fav.id === id;
+   });
 
-   currentFavs.push(Product);
-
-   saveFavs(currentFavs);
+   if(productExist === undefined) {
+        const Product = { id: id, name: name};
+        currentFavs.push(product);
+        saveFavs(currentFavs);
+   }
+   else {
+       const newFaws = currentFavs.filter(fav => fav.id !== id);
+       saveFavs(newFavs);
+   }
 }
 
-function getExistingFavs() {
-    const favs = localStorage.getItem("cart");
-   
 
-    if(favs === null) {
-        return [];
-    }
-    else {
-        return JSON.parse(favs);
-    }
-}
+
 
 
 function saveProducts(favs) {
     localStorage.setItem("cart", JSON.stringify(favs));
 }
-
-
-
-
-
-
 
 
 
