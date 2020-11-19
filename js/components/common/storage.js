@@ -19,7 +19,7 @@
 
 
 
-/*NY FORBEDRET MÅTE*/
+/*NY MÅTE*/
 /*async function doLogin(username, password) {
 
     const url = "http://localhost:1337/";

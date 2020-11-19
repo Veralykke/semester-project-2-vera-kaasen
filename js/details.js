@@ -13,11 +13,12 @@ products.forEach((product) => {
                                 <img src="http://localhost:1337${product.image.url}" alt="">
                                 <p>Price:${product.price}</p>
                                 <i class= "fa fa-heart" data-id="${product.id}" data-name= "${product.name}"></i>`;
-});
+                                //???<button class="add-to-cart" onclick = "(${product.id})">More</button>
+                            });
 
-const favButtons = document.querySelectorAll(".add-to-cart");
+const productButtons = document.querySelectorAll(".add-to-cart");
 
-favButtons.forEach(button) => {
+productButtons.forEach(button) => {
     button.addEventListener("click", handleClick);
 }
 
@@ -25,9 +26,47 @@ function handleClick() {
     console.log(event);
     event.target.classList.toggle("fa");
     event.target.classList.toggle("far");
+
+    const id = this.dataset.id;
+    const name = this.dataset.name;
+
+   //console.log("id", id);
+
+   const currentFavs = getExistingFavs();
+   
+   const Product = { id: id, name: name};
+
+   currentFavs.push(Product);
+
+   saveFavs(currentFavs);
 }
 
-/*NY FORBEDRET MÅTE*/
+function getExistingFavs() {
+    const favs = localStorage.getItem("cart");
+   
+
+    if(favs === null) {
+        return [];
+    }
+    else {
+        return JSON.parse(favs);
+    }
+}
+
+
+function saveProducts(favs) {
+    localStorage.setItem("cart", JSON.stringify(favs));
+}
+
+
+
+
+
+
+
+
+
+/*NY MÅTE*/
 /*const queryString = document.location.search;
 
 const params = new URLSearchParams(queryString);
