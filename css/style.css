@@ -16,15 +16,16 @@ h1 {
   margin-top: 45px;
   margin-left: 59px;
   color: #191919;
-  font-family: "pt Sans", sans-serif;
+  font-family: "open sans", sans-serif;
   margin-bottom: 38px;
 }
 
 h4 {
+  margin-top: 45px;
   margin-bottom: 15px;
   margin-left: 29px;
   font-size: 1.5em;
-  font-family: "pt Sans", sans-serif;
+  font-family: "open sans", sans-serif;
   color: #191919;
 }
 
@@ -33,12 +34,11 @@ p {
   margin-left: 29px;
   font-size: 1.3em;
   font-weight: bold;
-  font-family: "pt Sans", sans-serif;
+  font-family: "open sans", sans-serif;
   color: #191919;
 }
 
 /*
-
 ?? ha knapp eller icon?
 .add-to-cart {
     width: 251px;
@@ -62,12 +62,16 @@ p {
   border: 1px solid #b9aaab;
   color: #d9d2d5;
   margin-top: 1rem;
-  pad: 1rem;
+  padding: 1rem;
+}
+
+.footer-text {
+  font-family: "open sans", sans-serif;
+  font-size: 2em;
 }
 
 @media only screen and (min-width: 768px) {
-  h4,
-  p {
+  h4, p {
     margin-left: 217px;
   }
 }
@@ -132,12 +136,13 @@ nav li a {
   display: block;
   color: #604242;
   text-align: center;
-  padding: 10px 0;
+  padding: 10px 10px 0px 10px;
   text-decoration: none;
-  font-size: 1em;
-  width: 352px;
+  font-size: 1.3em;
+  width: 355px;
   height: 70px;
-  font-family: "ubuntu", sans-serif;
+  font-family: "open sans", sans-serif;
+  font-weight: bold;
 }
 
 nav li a:hover:not(.active) {
@@ -147,7 +152,6 @@ nav li a:hover:not(.active) {
 nav li a.active {
   color: white;
   background-color: #83654A;
-  padding-right: 24px;
 }
 
 .login-button-toggle {
@@ -306,14 +310,25 @@ footer .text-footer {
   }
 }
 
+/*
+ .login-hidden {
+    display: none;
+}
+
+.login-button-toggle {
+    width: auto;
+}*/
 button {
   background-color: #257363;
   color: #fcfcfc;
   margin: 8px 0;
   padding: 14px 20px;
+  margin-left: 32px;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 80%;
+  font-family: "ubuntu", sans-serif;
+  margin-bottom: 65px;
 }
 
 button button:hover {
@@ -326,22 +341,22 @@ button .cancelbtn {
   background-color: #257363;
 }
 
-.imageContainer {
+button .imageContainer {
   margin: 24px 0 12px 0;
   text-align: center;
   position: relative;
 }
 
-img.avatar {
+button img.avatar {
   border-radius: 50%;
   width: 40%;
 }
 
-.formContainer {
+button .formContainer {
   padding: 16px;
 }
 
-.modal {
+button .modal {
   position: fixed;
   display: none;
   z-index: 1;
@@ -355,14 +370,14 @@ img.avatar {
   padding-top: 60px;
 }
 
-.modal-content {
+button .modal-content {
   background-color: #fcfcfc;
   margin: 5% auto 15% auto;
   border: epx solid #83654A;
   width: 80%;
 }
 
-.close {
+button .close {
   position: absolute;
   right: 25px;
   color: #fcfcfc;
@@ -371,13 +386,13 @@ img.avatar {
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+button .close:hover,
+button .close:focus {
   color: red;
   cursor: pointer;
 }
 
-.animate {
+button .animate {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s;
 }
@@ -403,16 +418,16 @@ img.avatar {
 }
 
 @media screen and (max-width: 300px) {
-  span.spw {
+  button span.spw {
     display: block;
     float: none;
   }
-  .canselbtn {
+  button .canselbtn {
     width: 100%;
   }
 }
 
-input[type=text], input[type=password] {
+button input[type=text], button input[type=password] {
   padding: 12px 20px;
   width: 100%;
   margin: 8px 0;
@@ -424,7 +439,6 @@ input[type=text], input[type=password] {
 
 /* Credits:
  Icons made by Smashicons at https://www.flaticon.com/
- 
- 
+
  */
 /*# sourceMappingURL=style.css.map */

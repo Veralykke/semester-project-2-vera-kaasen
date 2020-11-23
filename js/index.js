@@ -6,7 +6,9 @@ import {hamburgerMenu} from "./hamburger.js";
 
 /* Get hero-banner image */
 const heroBannerUrl = url + "home";
+
 (async function() {
+    
     try {
         const response = await fetch(heroBannerUrl);
         const json = await response.json();
@@ -18,7 +20,6 @@ const heroBannerUrl = url + "home";
         displayMessage("error", error, ".featured-container");
     }
 })();
-
 
 /*Adding HTML(json) function here*/
  const featuredUrl = url + "products";
@@ -42,22 +43,23 @@ const heroBannerUrl = url + "home";
 
     json.forEach(function (product) {
         /* If featured product, render it, else skip it */
-        if(product.featured ){
+        if(product.featured ) {
             container.innerHTML += `
-            <a class="product" href="detail.html?id=${product.id}">
+            <a class="product" href="products.html?id=${product.id}">
                 <h4>${product.title}</h4>
-                <p>Price: ${product.price}</p>
+                <p>Price: ${product.price} $</p>
                 <img class="product-images" src="http://localhost:1337${product.image.url}" alt="product-images">
+                <button onclick href= products.html>More</button>
             </a>`;
         }
     });
 }
 
 /* Login button to toggle show or hide login form */
-const loginButton = document.querySelector(".login-button-toggle");
+/*const loginButton = document.querySelector(".login-button-toggle");
 loginButton.addEventListener("click", loginForm);
 
 function loginForm(){
     document.querySelector("#formId").classList.toggle("login-hidden");
-}
+}*/
 

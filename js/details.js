@@ -1,47 +1,72 @@
 import { url } from "./components/api.js";
 import displayMessage from "./components/common/displayMessage.js";
-import { getExistingFavs } from "./components/common/storage.js";
 
 
-const detailContainer = document.querySelector(".detail-container");
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+const id = params.get("id");
 
-const productDetailUrl = url + "products/" + id;     //<----------??????????????????????????????+
-
-const addedproducts = getExistingFavs();
-
-products.forEach((product) => {  
-
-let cssClass = "far";
-
-// does the product id exist in the fav arrey?
-const doesObjectExist = favourites.find(function(fav) {
-    console.log(fav)
-
-    return parseInt(fav.id) === product.id;
-});
-
-console.log(doesObjectExist);
-//if the product id exist in the fav arrey, change the style of the i element
-if(doesObjectExist) {
-    cssClass = "fa";
+if (!id) {
+    document.location.href = "/";
 }
 
-    detailContainer.innerHTML += `div class= "product">
-                                <h1>${product.title}</h1>
-                                <p>Description:${product.description}</p>
-                                <img src="http://localhost:1337${product.image.url}" alt="">
-                                <p>Price:${product.price}</p>
-                                <i class= "fa fa-heart" data-id="${product.id}" data-name= "${product.name}"></i>
-                                </div>`;
-                                //???<button class="add-to-cart" onclick = "(${product.id})">More</button>
-    });
-                        
+const productDetailUrl = url + "products/" + id;
 
-const productButtons = document.querySelectorAll(".add-to-cart");
+(async function () {
+    try {
+        const response = await fetch(productDetailUrl);
+        const details = await response.json();
+        
+        document.title = details.name;
+    
+        const container = document.querySelector(".detail-container");
+        container.innerHTML = "";
+    
+        container.innerHTML += `
+        <div id="product-${details.id}" class="product" 
+            data-title = "${details.title}" 
+            data-price = "${details.price}"
+            data-image = "http://localhost:1337${details.image.url}">
 
-productButtons.forEach(button) => {
-    button.addEventListener("click", handleClick);
+            <h4>${details.title}</h4>
+            <p>Price: ${details.price}$</p>
+            <img class="product-images" src="http://localhost:1337${details.image.url}" alt="product-images">
+            <button onclick href= details.html class= "add-to-cart" = "addCart(${details.id})">Add to cart</button>
+        </div>`;
+    }
+        catch (error) {
+            displayMessage("error", error, ".detail-container");
+        }
+})();
+//bort
+
+/*ADD TO CART..NY MÅTE*/
+function addCart(productId){
+
+    /* We get the data attributes from the product ID */
+    const product = document.querySelector("#product-"+productId).dataset;
+
+    /* We store the current product to local storage as a string (JSON.stringufy) */
+    localStorage.setItem("product", JSON.stringify(product));
+
+    /* We parse the localStorage data to JSON data and can use it */
+    const parsedData = JSON.parse(localStorage.getItem("product"));
+
+    /* Here we display the product title */
+    console.log(parsedData.title);
+
+    /* 
+        When we finish the function and make it add more products to the cart.
+        It will be an array of objects, and we do an forEach loop on all producs and render it
+        Just like we have in the 'fetch' to show the HTML (or as above)
+     */
 }
+
+window.addCart = addCart;
+
+
+/*
+ANNA MÅTE
 
 function handleClick() {
     console.log(event);
@@ -74,75 +99,9 @@ function handleClick() {
 function saveProducts(favs) {
     localStorage.setItem("cart", JSON.stringify(favs));
 }
+*/
 
 
 
-/*NY MÅTE*/
-/*const queryString = document.location.search;
-
-const params = new URLSearchParams(queryString);
-
-const id = params.get("id");
-
-if (!id) {
-    document.location.href = "/";
-}
-
-const productDetailUrl = url + "products/" + id;
-
-(async function () {
-    try {
-        const response = await fetch(productDetailUrl);
-        const details = await response.json();
-    
-        document.title = details.name;
-    
-        const container = document.querySelector(".detail-container");
-    
-        container.innerHTML += `
-                <h1>${product.title}</h1>
-                <p>Description:${product.description}</p>
-                <img src="http://localhost:1337${product.image.url}" alt="">
-                <p>Price:${product.price}</p>
-                <button class="add-to-cart" onclick = "(${product.id})">More</button>`;
-
-        console.log(details);
-    }
-        catch (error) {
-            displayMessage("error", error, ".detail-container");
-        }
-})();*/
-
-
-
-
-
-
-
-
-
-/*ADD TO CART -LEGG PÅ DETALJ PAGE- NY FORBEDRET MÅTE*/
-/*function addCart(productId){*/
-
-    /* We get the data attributes from the product ID */
-    /*const product = document.querySelector("#product-"+productId).dataset;*/
-
-    /* We store the current product to local storage as a string (JSON.stringufy) */
-    /*localStorage.setItem("product", JSON.stringify(product));*/
-
-    /* We parse the localStorage data to JSON data and can use it */
-    /*const parsedData = JSON.parse(localStorage.getItem("product"));*/
-
-    /* Here we display the product title */
-    /*console.log(parsedData.title);*/
-
-    /* 
-        When we finish the function and make it add more products to the cart.
-        It will be an array of objects, and we do an forEach loop on all producs and render it
-        Just like we have in the 'fetch' to show the HTML (or as above)
-     */
-/*}
-
-window.addCart = addCart;*/
 
 

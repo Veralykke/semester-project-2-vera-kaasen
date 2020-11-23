@@ -13,9 +13,13 @@ button {
     color: getColour(white);
     margin: 8px 0;
     padding: 14px 20px; 
+    margin-left: 32px;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 80%;
+    font-family: $font-details;
+    margin-bottom: 65px;
+    
 
 button:hover {
     opacity: 0.8;
@@ -115,3 +119,4 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
+}
