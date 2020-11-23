@@ -6,47 +6,6 @@ import { displayMessage } from "./components/common/displayMessage.js";
 
 const productsUrl = url  + "products";
 
-
-async function getProducts() {
-    
-    try {
-        const response = await fetch(productsUrl);
-        const json = await response.json();
-      
-        console.log(json.data);
-
-        const products = json.data;
-
-        renderProducts(products);
-        searchProducts(products);
-    }catch (error) {
-        console.log(error);
-        displayMessage("error", error, ".product-container");
-    }
-}
-
-getProducts();
-
-/*HVORDAN ADDE BUTTON TIL DETALJPAGE?? OG PÅ HVILKEN JS SIDE?
-const poroductByID = product.find.(findProduct);
-
-function findProduct(product) {
-    if(product.id === 1) {
-        return true;
-    }
-}
-/*HVORDAN ADDE BUTTON TIL DETALJPAGE??
-
-
-
-
-
-
-
-
-
-
-
 /*NYERE API VERSjON PLUSS ADDING TO CART*/
 
 /*Adding HTML(json) function here*/
@@ -84,4 +43,58 @@ function findProduct(product) {
         </div>`;
     });
 }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function getProducts() {
+    
+    try {
+        const response = await fetch(productsUrl);
+        const json = await response.json();
+      
+        console.log(json.data);
+
+        const products = json.data;
+
+        renderProducts(products);
+        searchProducts(products);
+    }catch (error) {
+        console.log(error);
+        displayMessage("error", error, ".product-container");
+    }
+}
+
+getProducts();
+
+/*HVORDAN ADDE BUTTON TIL DETALJPAGE?? OG PÅ HVILKEN JS SIDE?
+const poroductByID = product.find.(findProduct);
+
+function findProduct(product) {
+    if(product.id === 1) {
+        return true;
+    }
+}
+/*HVORDAN ADDE BUTTON TIL DETALJPAGE??
+
+
+
+
 

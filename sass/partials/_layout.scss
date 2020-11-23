@@ -90,5 +90,21 @@
         
     }
    
-   
+@media only screen and (min-width : 768px) {
+    .cover-image {
+        height: 512px;
+    }
+    .product-images {
+        margin-left: 217px;
+    } 
+    
+}
 
+@media only screen and (min-width : 1366px) {
+    .cover-image {
+        height: 768px;
+    background-position: center;
+      
+    }
+    
+}

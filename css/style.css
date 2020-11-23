@@ -65,6 +65,13 @@ p {
   pad: 1rem;
 }
 
+@media only screen and (min-width: 768px) {
+  h4,
+  p {
+    margin-left: 217px;
+  }
+}
+
 nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -281,6 +288,22 @@ footer .text-footer {
   color: white;
   font-weight: 500;
   padding-top: 45px;
+}
+
+@media only screen and (min-width: 768px) {
+  .cover-image {
+    height: 512px;
+  }
+  .product-images {
+    margin-left: 217px;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  .cover-image {
+    height: 768px;
+    background-position: center;
+  }
 }
 
 button {

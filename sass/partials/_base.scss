@@ -65,3 +65,11 @@ p {
     margin-top: 1rem;
     pad: 1rem;
 }
+
+@media only screen and (min-width : 768px)  {
+    h4,
+    p {
+        margin-left: 217px; 
+    }
+   
+}

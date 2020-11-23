@@ -13,23 +13,29 @@ products.forEach((product) => {
 
 let cssClass = "far";
 
+// does the product id exist in the fav arrey?
 const doesObjectExist = favourites.find(function(fav) {
     console.log(fav)
 
-    return fav.id === product.id;
-})
+    return parseInt(fav.id) === product.id;
+});
 
 console.log(doesObjectExist);
+//if the product id exist in the fav arrey, change the style of the i element
+if(doesObjectExist) {
+    cssClass = "fa";
+}
 
-{
-    detailContainer.innerHTML += `
+    detailContainer.innerHTML += `div class= "product">
                                 <h1>${product.title}</h1>
                                 <p>Description:${product.description}</p>
                                 <img src="http://localhost:1337${product.image.url}" alt="">
                                 <p>Price:${product.price}</p>
-                                <i class= "fa fa-heart" data-id="${product.id}" data-name= "${product.name}"></i>`;
+                                <i class= "fa fa-heart" data-id="${product.id}" data-name= "${product.name}"></i>
+                                </div>`;
                                 //???<button class="add-to-cart" onclick = "(${product.id})">More</button>
-                            });
+    });
+                        
 
 const productButtons = document.querySelectorAll(".add-to-cart");
 
@@ -63,9 +69,6 @@ function handleClick() {
        saveFavs(newFavs);
    }
 }
-
-
-
 
 
 function saveProducts(favs) {

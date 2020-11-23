@@ -1,3 +1,13 @@
+
+/*
+ .login-hidden {
+    display: none;
+}
+
+.login-button-toggle {
+    width: auto;
+}*/
+
 button {
     background-color: getColour(accent);
     color: getColour(white);
@@ -11,13 +21,13 @@ button:hover {
     opacity: 0.8;
 }
 
+
 .cancelbtn {
     padding: 10px 18px;
     width: auto;
     background-color: getColour(accent);
 }
 
-}
 
 .imageContainer {
     margin: 24px 0 12px 0;
