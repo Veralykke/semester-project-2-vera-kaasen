@@ -3,7 +3,6 @@ import displayMessage from "./components/common/displayMessage.js";
 import {hamburgerMenu} from "./hamburger.js";
 /*import validateForm from "./components/common/doLogin.js";*/
 
-
 /* Get hero-banner image */
 const heroBannerUrl = url + "home";
 
