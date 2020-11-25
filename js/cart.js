@@ -18,6 +18,7 @@ favourites.forEach((details) => {
                                     <h4>${detail.title}</h4>    
                                     <p>Price: ${details.price}$</p>
                                     data-image = "http://localhost:1337${details.image.url}">
+                                    <p><a href="detail.html">Product view</a></p>
                                     <button class "pro add-to-cart">
                                     </div>`;
 });

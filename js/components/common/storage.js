@@ -1,4 +1,4 @@
-
+//CART
 export function getExistingFavs() {
     const favProd = localStorage.getItem("favourites");
 
@@ -9,7 +9,7 @@ export function getExistingFavs() {
         return JSON.parse(favProd);
     }
 }
-
+//CART
 
 
 /*LOG IN NY MÅTE */

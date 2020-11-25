@@ -40,10 +40,12 @@ product.forEach((details) => {
         <div id="product-${details.id}" class="product" 
             data-title = "${details.title}" 
             data-price = "${details.price}"
+            data-price = "${detail.description}"
             data-image = "http://localhost:1337${details.image.url}">
 
             <h4>${details.title}</h4>
-            <p>Price: ${details.price}$</p>
+            <p>Price: ${details.price}</p>
+            <p>Description: ${detail.description}</p>
             <img class="product-images" src="http://localhost:1337${details.image.url}" alt="product-images">
             <button class = "${cssClass} add-to-cart" data-id="${detail.id}" data-name="${detail.title}">
         </div>`;
