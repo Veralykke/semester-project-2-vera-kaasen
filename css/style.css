@@ -38,16 +38,14 @@ p {
   color: #191919;
 }
 
-/*
-?? ha knapp eller icon?
 .add-to-cart {
-    width: 251px;
-    height: 45px;
-    text-align: center;
-    margin-left: 30px;
-    margin-bottom: 105px;
+  width: 251px;
+  height: 45px;
+  text-align: center;
+  margin-left: 30px;
+  margin-bottom: 105px;
 }
-*/
+
 .message.error {
   color: red;
   border-color: red;

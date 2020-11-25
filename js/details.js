@@ -1,6 +1,6 @@
 import { url } from "./components/api.js";
 import displayMessage from "./components/common/displayMessage.js";
-
+import { getExistingFavs } from "./components/common/storage.js";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -11,6 +11,20 @@ if (!id) {
 }
 
 const productDetailUrl = url + "products/" + id;
+
+//TESTE
+const favourites = getExistingFavs();
+product.forEach((details) => {
+    let cssClass = "prodB";
+//does the product exist in the favprod array
+    const doesObjectExist = favourites.find(function (fav) {
+        return parseInt(fav.id) === details.id;
+    });
+
+    if (doesObjectExist) {
+        cssClass ="pro";
+    }
+}
 
 (async function () {
     try {
@@ -31,47 +45,25 @@ const productDetailUrl = url + "products/" + id;
             <h4>${details.title}</h4>
             <p>Price: ${details.price}$</p>
             <img class="product-images" src="http://localhost:1337${details.image.url}" alt="product-images">
-            <button onclick href= details.html class= "add-to-cart" = "addCart(${details.id})">Add to cart</button>
+            <button class = "${cssClass} add-to-cart" data-id="${detail.id}" data-name="${detail.title}">
         </div>`;
     }
         catch (error) {
             displayMessage("error", error, ".detail-container");
         }
 })();
-//bort
 
-/*ADD TO CART..NY MÅTE*/
-function addCart(productId){
+const favButtons = document.querySelectorAll(".product add-to-cart");
 
-    /* We get the data attributes from the product ID */
-    const product = document.querySelector("#product-"+productId).dataset;
-
-    /* We store the current product to local storage as a string (JSON.stringufy) */
-    localStorage.setItem("product", JSON.stringify(product));
-
-    /* We parse the localStorage data to JSON data and can use it */
-    const parsedData = JSON.parse(localStorage.getItem("product"));
-
-    /* Here we display the product title */
-    console.log(parsedData.title);
-
-    /* 
-        When we finish the function and make it add more products to the cart.
-        It will be an array of objects, and we do an forEach loop on all producs and render it
-        Just like we have in the 'fetch' to show the HTML (or as above)
-     */
+favButtons.forEach((button) => {
+    button.addEventListener(".click", handleClick);
+  });
 }
 
-window.addCart = addCart;
-
-
-/*
-ANNA MÅTE
-
-function handleClick() {
+function handleClick(event) {
     console.log(event);
-    event.target.classList.toggle("fa");
-    event.target.classList.toggle("far");
+    event.target.classList.toggle("pro");
+    event.target.classList.toggle("prodB");
 
     const id = this.dataset.id;
     const name = this.dataset.name;
@@ -85,7 +77,7 @@ function handleClick() {
    });
 
    if(productExist === undefined) {
-        const Product = { id: id, name: name};
+        const Product = { id: id, name: name };
         currentFavs.push(product);
         saveFavs(currentFavs);
    }
@@ -95,13 +87,34 @@ function handleClick() {
    }
 }
 
-
-function saveProducts(favs) {
-    localStorage.setItem("cart", JSON.stringify(favs));
+function saveFavs(favs) {
+    localStorage.setItem("favourites", JSON.stringify(prod));
 }
-*/
+//TESTE
 
+/*ADD TO CART* NY MÅTE NY MÅTE NY MÅTE
 
+function addCart(productId){
 
+    /* We get the data attributes from the product ID */
+    //const product = document.querySelector("#product-"+productId).dataset;
+
+    /* We store the current product to local storage as a string (JSON.stringify) */
+    //localStorage.setItem("product", JSON.stringify(product));
+
+    /* We parse the localStorage data to JSON data and can use it */
+    //const parsedData = JSON.parse(localStorage.getItem("product"));
+
+    /* Here we display the product title */
+    //console.log(parsedData.title);
+
+    /* 
+        When we finish the function and make it add more products to the cart.
+        It will be an array of objects, and we do an forEach loop on all producs and render it
+        Just like we have in the 'fetch' to show the HTML (or as above)
+     */
+//}
+
+//window.addCart = addCart;
 
 

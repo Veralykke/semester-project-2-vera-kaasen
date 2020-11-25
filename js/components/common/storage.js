@@ -1,5 +1,19 @@
-/*NY MÅTE LOG IN*/
-async function doLogin(username, password) {
+
+export function getExistingFavs() {
+    const favProd = localStorage.getItem("favourites");
+
+    if(favProd === null) {
+        return [];
+    }
+    else {
+        return JSON.parse(favProd);
+    }
+}
+
+
+
+/*LOG IN NY MÅTE */
+/*async function doLogin(username, password) {
 
     const url = "http://localhost:1337/";
 
@@ -21,21 +35,11 @@ async function doLogin(username, password) {
         document.querySelector(".error").innerHTML = "Login Failed...";
         }
     }
-    catch(error) {
+    catch (error) {
     console.log("token stored <3");
         }
 
-export { doLogin, storeToken };
+export { doLogin, storeToken };*/
 
-/*export function getExistingFavs() {
-    const favs = localStorage.getItem("cart");
-   
 
-    if(favs === null) {
-        return [];
-    }
-    else {
-        return JSON.parse(favs);
-    }
-}
-*/
+

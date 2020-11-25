@@ -1,8 +1,8 @@
 import {hamburgerMenu} from "./hamburger.js";
 import {url} from "./components/api.js";
 import { searchProducts } from "./components/common/searchProducts.js";
-/*
-import { displayMessage } from "./components/common/displayMessage.js";*/
+
+/*import { displayMessage } from "./components/common/displayMessage.js";*/
 
 
 /* NY API VERSjON */
@@ -41,7 +41,7 @@ function HTML(json) {
             <h4>${product.title}</h4>
             <p>Price: ${product.price}$</p>
             <img class="product-images" src="http://localhost:1337${product.image.url}" alt="product-images">
-            <button class="add-to-cart" data-id="${product.id}">More</button>
+            <button class="button-more" data-id="${product.id}">More</button>
         </div>`;
     });
 
@@ -51,7 +51,7 @@ function HTML(json) {
     });
 }
 
-function viewDetails(e){
+function viewDetails(e){ //(event)
     window.location.href = `detail.html?id=${e.target.dataset.id}`;
 }
 
