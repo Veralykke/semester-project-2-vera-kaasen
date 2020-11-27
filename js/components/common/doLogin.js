@@ -1,3 +1,48 @@
+import displayMessage from "./components/common/displayMessage.js";
+import { url } from "./components/api.js";
+
+const form = document.querySelector("form");
+const username = document.querySelector("#username");
+const password = document.querySelector("#password");
+const message = document.querySelector(".message-container");
+
+form.addEventListener("submit", formSubmit);
+
+
+function formSubmit(event) {
+    event.preventDefault();
+
+   const valueUsername = username.value.trim();
+   const valuePassword = password.value.trim();
+
+   if(valueUsername.length === 0 || valuePassword.length === 0) {
+       displayMessage("warning", "add a valid value", ".message-container");
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*import { doLogin } from "./components/common/storage.js";
 
 const username = document.querySelector("#username");

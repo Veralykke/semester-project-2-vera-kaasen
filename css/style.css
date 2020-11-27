@@ -46,16 +46,6 @@ p {
   margin-bottom: 105px;
 }
 
-.message.error {
-  color: red;
-  border-color: red;
-}
-
-.message.success {
-  color: green;
-  border-color: green;
-}
-
 .message {
   border: 1px solid #b9aaab;
   color: #d9d2d5;
@@ -368,6 +358,41 @@ button {
 
 button button:hover {
   opacity: 0.8;
+}
+
+button input {
+  margin-top: 4px;
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+}
+
+button form {
+  background: #fcfcfc;
+  padding: 4px;
+  border-radius: 1px;
+}
+
+button label {
+  margin-top: 1rem;
+  display: block;
+}
+
+button .form-error {
+  display: none;
+  margin-top: 4px;
+  color: red;
+  font-size: larger;
+}
+
+button .message.error {
+  color: red;
+  border-color: red;
+}
+
+button .message.success {
+  color: green;
+  border-color: green;
 }
 
 button .cancelbtn {

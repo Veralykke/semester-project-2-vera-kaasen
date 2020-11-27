@@ -9,7 +9,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script type="module" src="js/script.js"></script>
-    <script type="module" src="js/storage.js"></script>
+
 
     <title>Admin</title>
 
@@ -44,19 +44,22 @@
 
             <h1>Login</h1>
 
-            <form class="admin-form">
+            <form>
                 <div class="message-container">
                     <div>
                         <div>
-                            <label for="name">Name</label>
-                            <input id="name" />
+                            <label for="username">Username</label>
+                            <input id="username" />
                         </div>
-
-                        <input id="admin-id" type="hidden" />
-
                         <div>
-                            <button id="update-admin">Update</button>
+                            <label for="email">Email</label>
+                            <input id="email" />
                         </div>
+                        <div>
+                            <label for="password">Password</label>
+                            <input id="password" />
+                        </div>
+                        <button>Submit</button>
             </form>
         </div>
     </main>

@@ -54,15 +54,7 @@ p {
 
 //SLETTE
 
-.message.error {
-    color: red;
-    border-color: red;
-}
 
-.message.success {
-    color: green;
-    border-color: green;
-}
 
 .message {
     border: 1px solid getColour(secondary);
