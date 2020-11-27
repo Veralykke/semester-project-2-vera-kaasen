@@ -1,6 +1,6 @@
 /*SETT SAMMEN*/
 .cover-image{
-    height: 250px;
+    height: 213px;
 }
 .featured-container {
     /*display: flex;*/
@@ -32,7 +32,7 @@
 .product-images {
     justify-content: space-around;
     border: 1px solid getColour(primary);
-    width: 250px;
+    width: 206px;
     height: auto;
     margin-bottom: 14px;
     margin-left: 29px;
@@ -90,9 +90,28 @@
         
     }
    
+ @media only screen and (min-width :375px) {
+     .cover-image {
+         height: 250px;
+     }
+     h1 {
+         margin-left: 59px;
+     }
+     .product-images {
+         width: 250px;
+     }
+     
+ }
+ @media only screen and (min-width : 414px) {
+    .cover-image {
+        height: 275px;
+    }
+ }
+
 @media only screen and (min-width : 768px) {
     .cover-image {
         height: 512px;
+
     }
     .product-images {
         margin-left: 217px;
@@ -102,9 +121,15 @@
 
 @media only screen and (min-width : 1366px) {
     .cover-image {
-        height: 768px;
-    background-position: center;
-      
+        height: 728px;
+        background-position: center;
+        margin-left: 303px;
     }
-    
+    h1 {
+        margin-left: 286px;
+    }
+    .product-images {
+        width: 375px;
+    }
+
 }

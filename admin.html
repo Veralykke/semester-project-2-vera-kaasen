@@ -9,6 +9,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/storage.js"></script>
 
     <title>Admin</title>
 
@@ -41,26 +42,21 @@
 
             <div class="loading">loading...</div>
 
+            <h1>Login</h1>
+
             <form class="admin-form">
                 <div class="message-container">
                     <div>
-                        <label for="name">Name</label>
-                        <input id="name" />
-                    </div>
-                    <div>
-                        <label for="Price">Price</label>
-                        <input id="price" />
-                    </div>
-                    <div>
-                        <label for="description">Description</label>
-                        <textarea id="desicription-id"></textarea>
-                    </div>
-                    <P>No stress, we have saved your products, welcome back</P>
-                    <input id="admin-id" type="hidden" />
+                        <div>
+                            <label for="name">Name</label>
+                            <input id="name" />
+                        </div>
 
-                    <div>
-                        <button id="update-admin">Update</button>
-                    </div>
+                        <input id="admin-id" type="hidden" />
+
+                        <div>
+                            <button id="update-admin">Update</button>
+                        </div>
             </form>
         </div>
     </main>

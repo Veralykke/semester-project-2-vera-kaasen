@@ -72,3 +72,17 @@ font-size: 1em;
     height: 19px;
     width: auto;
 }
+
+@media only screen and (min-width : 1366px) {
+    .logo {
+        height: 26px;
+        margin-top: 34px;
+        margin-left: 34px;
+    }
+
+    nav .hamburger {
+        right: 34px;
+        top: 34px;
+    }
+}
+

@@ -12,19 +12,20 @@ if (!id) {
 
 const productDetailUrl = url + "products/" + id;
 
-//TESTE
+
 const favourites = getExistingFavs();
-product.forEach((details) => {
+favourites.forEach((details) => {
+     //SLETTE?
     let cssClass = "prodB";
 //does the product exist in the favprod array
     const doesObjectExist = favourites.find(function (fav) {
         return parseInt(fav.id) === details.id;
     });
-
+//SLETTE? 
     if (doesObjectExist) {
         cssClass ="pro";
     }
-}
+});
 
 (async function () {
     try {
@@ -32,69 +33,70 @@ product.forEach((details) => {
         const details = await response.json();
         
         document.title = details.name;
+        const cssClass = "";
     
         const container = document.querySelector(".detail-container");
         container.innerHTML = "";
     
         container.innerHTML += `
-        <div id="product-${details.id}" class="product" 
-            data-title = "${details.title}" 
-            data-price = "${details.price}"
-            data-price = "${detail.description}"
-            data-image = "http://localhost:1337${details.image.url}">
+        <div id="product-${details.id}" class="product">
 
             <h4>${details.title}</h4>
             <p>Price: ${details.price}</p>
-            <p>Description: ${detail.description}</p>
             <img class="product-images" src="http://localhost:1337${details.image.url}" alt="product-images">
-            <button class = "${cssClass} add-to-cart" data-id="${detail.id}" data-name="${detail.title}">
+            <p>Description: ${details.description}</p>
+            <button class = "${cssClass} add-to-cart" 
+                data-id="${details.id}"
+                data-title = "${details.title}" 
+                data-price = "${details.price}"
+                data-description = "${details.description}"
+                data-image = "http://localhost:1337${details.image.url}">
+            Add to cart</button>
         </div>`;
+
+        const favButton = document.querySelector(".add-to-cart");
+        favButton.addEventListener("click", handleClick);
     }
         catch (error) {
             displayMessage("error", error, ".detail-container");
         }
 })();
 
-const favButtons = document.querySelectorAll(".product add-to-cart");
 
-favButtons.forEach((button) => {
-    button.addEventListener(".click", handleClick);
-  });
-}
-
-function handleClick(event) {
-    console.log(event);
-    event.target.classList.toggle("pro");
-    event.target.classList.toggle("prodB");
-
+  function handleClick(event) {
     const id = this.dataset.id;
-    const name = this.dataset.name;
+    const name = this.dataset.title;
+    const price = this.dataset.price;
+    const image = this.dataset.image;
 
-   //console.log("id", id);
+    const currentFavs = getExistingFavs();
 
-   const currentFavs = getExistingFavs();
-   
-   const productExist = currentFavs.find(function(fav) {
-       return fav.id === id;
-   });
+    const productExist = currentFavs.find(function(fav) {
+        return fav.id === id;
+    });
+    
 
-   if(productExist === undefined) {
-        const Product = { id: id, name: name };
+    /* if cart is empty and first time
+       make an array and add it to the card and store the localStorage
+       else just save directly to storage */
+    if(productExist === undefined) { 
+        const product = { id: id, name: name, price: price, image: image };
+        console.log(product);
         currentFavs.push(product);
         saveFavs(currentFavs);
-   }
-   else {
-       const newFaws = currentFavs.filter(fav => fav.id !== id);
+   } else { //Remove from Cart
+       const newFavs = currentFavs.filter(fav => fav.id !== id);
        saveFavs(newFavs);
    }
-}
 
+}
+ 
 function saveFavs(favs) {
-    localStorage.setItem("favourites", JSON.stringify(prod));
+    localStorage.setItem("favourites", JSON.stringify(favs));
 }
-//TESTE
 
-/*ADD TO CART* NY MÅTE NY MÅTE NY MÅTE
+
+/*ADD TO CART* NY MÅTE 
 
 function addCart(productId){
 

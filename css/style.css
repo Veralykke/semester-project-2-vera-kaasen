@@ -39,7 +39,7 @@ p {
 }
 
 .add-to-cart {
-  width: 251px;
+  width: 206px;
   height: 45px;
   text-align: center;
   margin-left: 30px;
@@ -169,9 +169,21 @@ nav li a.active {
   width: auto;
 }
 
+@media only screen and (min-width: 1366px) {
+  .logo {
+    height: 26px;
+    margin-top: 34px;
+    margin-left: 34px;
+  }
+  nav .hamburger {
+    right: 34px;
+    top: 34px;
+  }
+}
+
 /*SETT SAMMEN*/
 .cover-image {
-  height: 250px;
+  height: 213px;
 }
 
 .featured-container {
@@ -212,7 +224,7 @@ nav li a.active {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   border: 1px solid #d9d2d5;
-  width: 250px;
+  width: 206px;
   height: auto;
   margin-bottom: 14px;
   margin-left: 29px;
@@ -292,6 +304,24 @@ footer .text-footer {
   padding-top: 45px;
 }
 
+@media only screen and (min-width: 375px) {
+  .cover-image {
+    height: 250px;
+  }
+  h1 {
+    margin-left: 59px;
+  }
+  .product-images {
+    width: 250px;
+  }
+}
+
+@media only screen and (min-width: 414px) {
+  .cover-image {
+    height: 275px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .cover-image {
     height: 512px;
@@ -303,8 +333,15 @@ footer .text-footer {
 
 @media only screen and (min-width: 1366px) {
   .cover-image {
-    height: 768px;
+    height: 728px;
     background-position: center;
+    margin-left: 303px;
+  }
+  h1 {
+    margin-left: 286px;
+  }
+  .product-images {
+    width: 375px;
   }
 }
 
@@ -321,7 +358,7 @@ button {
   color: #fcfcfc;
   margin: 8px 0;
   padding: 14px 20px;
-  margin-left: 32px;
+  margin-left: 30px;
   border: none;
   cursor: pointer;
   width: 80%;
@@ -395,6 +432,10 @@ button .animate {
   animation: animatezoom 0.6s;
 }
 
+button .productView {
+  font-size: 3em;
+}
+
 @-webkit-keyframes animatezoom {
   from {
     -webkit-transform: scale(0);
@@ -433,6 +474,13 @@ button input[type=text], button input[type=password] {
   border: 1px solid #d9d2d5;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+@media only screen and (min-width: 768px) {
+  button {
+    margin-left: 219px;
+    width: 36%;
+  }
 }
 
 /* Credits:

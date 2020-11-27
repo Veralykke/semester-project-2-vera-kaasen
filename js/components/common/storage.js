@@ -11,7 +11,6 @@ export function getExistingFavs() {
 }
 //CART
 
-
 /*LOG IN NY MÅTE */
 /*async function doLogin(username, password) {
 

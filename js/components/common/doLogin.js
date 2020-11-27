@@ -1,4 +1,6 @@
-/*const username = document.querySelector("#username");
+/*import { doLogin } from "./components/common/storage.js";
+
+const username = document.querySelector("#username");
 const usernameError = document.querySelector(".usernameError");
 
 const password = document.querySelector("#password");
@@ -38,8 +40,8 @@ export default function validateForm() {
     } else {
         return true;
     }
-}
-*/
+}*/
+
 
 
 

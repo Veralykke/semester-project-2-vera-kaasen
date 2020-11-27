@@ -3,7 +3,7 @@ import { getExistingFavs } from "./components/common/storage.js";
 
 
 const favourites = getExistingFavs();
-console.log(addedproducts); // sjekke hva vi får fra funksjonen
+console.log(favourites); // sjekke hva vi får fra funksjonen
 
 clearbtn();
 
@@ -11,14 +11,18 @@ const results = document.querySelector(".cart-container");
 
 if (favourites.length == 0) {
     results.innerHTML = " You have nothing in your cart yet";
+} else {
+    results.innerHTML = "";
+    favourites.forEach((details) => {
+        results.innerHTML += `
+            <div id="product-${details.id}" class="product"
+                <h4>${details.name}</h4>    
+                <p>Price: ${details.price}</p>
+                <img class="product-images" src="${details.image}">
+                <a class="productView" href="detail.html?id=${details.id}">Product view</a>
+                <button id="clearButton" type="button">Delete product</button>
+            </div>`;
+    });
 }
 
-favourites.forEach((details) => {
-    results.innerHTML += ` <div id="product-${details.id}" class="product"
-                                    <h4>${detail.title}</h4>    
-                                    <p>Price: ${details.price}$</p>
-                                    data-image = "http://localhost:1337${details.image.url}">
-                                    <p><a href="detail.html">Product view</a></p>
-                                    <button class "pro add-to-cart">
-                                    </div>`;
-});
+
