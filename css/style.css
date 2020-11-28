@@ -236,6 +236,12 @@ nav li a.active {
       justify-content: space-around;
 }
 
+.avatar-img {
+  border-radius: 50%;
+  width: 40%;
+  margin-left: 52px;
+}
+
 .search-box {
   width: 150px;
   height: auto;
@@ -251,6 +257,11 @@ nav li a.active {
   height: 120px;
   -webkit-animation: spin 2s linear infinite;
           animation: spin 2s linear infinite;
+}
+
+.admin-submit-btn {
+  margin-left: 0;
+  margin-top: 27px;
 }
 
 @-webkit-keyframes spin {
@@ -292,6 +303,49 @@ footer .text-footer {
   color: white;
   font-weight: 500;
   padding-top: 45px;
+}
+
+input {
+  margin-top: 8px;
+  width: 70%;
+  padding: 9px;
+  font-size: 16px;
+}
+
+.message-container {
+  width: 288px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 45px;
+}
+
+form {
+  background: #fcfcfc;
+  padding: 4px;
+  border-radius: 1px;
+}
+
+label {
+  margin-top: 1rem;
+  display: block;
+}
+
+.form-error {
+  display: none;
+  margin-top: 4px;
+  color: red;
+  font-size: larger;
+}
+
+.message.error {
+  color: red;
+  border-color: red;
+}
+
+.message.success {
+  color: green;
+  border-color: green;
 }
 
 @media only screen and (min-width: 375px) {
@@ -351,43 +405,14 @@ button {
   margin-left: 30px;
   border: none;
   cursor: pointer;
-  width: 80%;
+  width: 77%;
   font-family: "ubuntu", sans-serif;
   margin-bottom: 65px;
+  margin-top: 45px;
 }
 
 button button:hover {
   opacity: 0.8;
-}
-
-button input {
-  margin-top: 4px;
-  width: 100%;
-  padding: 8px;
-  font-size: 16px;
-}
-
-button form {
-  background: #fcfcfc;
-  padding: 4px;
-  border-radius: 1px;
-}
-
-button label {
-  margin-top: 1rem;
-  display: block;
-}
-
-button .form-error {
-  display: none;
-  margin-top: 4px;
-  color: red;
-  font-size: larger;
-}
-
-button .message.error {
-  color: red;
-  border-color: red;
 }
 
 button .message.success {
@@ -405,11 +430,6 @@ button .imageContainer {
   margin: 24px 0 12px 0;
   text-align: center;
   position: relative;
-}
-
-button img.avatar {
-  border-radius: 50%;
-  width: 40%;
 }
 
 button .formContainer {

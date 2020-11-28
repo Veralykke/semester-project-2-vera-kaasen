@@ -16,43 +16,14 @@ button {
     margin-left: 30px;
     border: none;
     cursor: pointer;
-    width: 80%;
+    width: 77%;
     font-family: $font-details;
     margin-bottom: 65px;
+    margin-top: 45px;
     
 
 button:hover {
     opacity: 0.8;
-}
-
-input {
-    margin-top: 4px;
-    width: 100%;
-    padding: 8px;
-    font-size: 16px;
-}
-
-form {
-    background: getColour(white);
-    padding: 4px;
-    border-radius: 1px;
-}
-
-label {
-    margin-top: 1rem;
-    display: block;
-}
-
-.form-error {
-    display: none;
-    margin-top: 4px;
-    color: red;
-    font-size: larger;
-}
- //slette??
-.message.error {
-    color: red;
-    border-color: red;
 }
 
 .message.success {
@@ -66,22 +37,16 @@ label {
     background-color: getColour(accent);
 }
 
-
 .imageContainer {
     margin: 24px 0 12px 0;
     text-align: center;
     position: relative;
 }
 
-img.avatar {
-    border-radius: 50%;
-    width: 40%;
-}
-
 .formContainer {
     padding: 16px;
 }
-
+//SLETTE
 .modal {
     position: fixed;
     display: none;
@@ -102,7 +67,7 @@ img.avatar {
     border: epx solid getColour(brown);
     width: 80%;
 }
-
+//SLETTE
 .close {
     position: absolute;
     right: 25px;

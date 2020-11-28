@@ -45,7 +45,13 @@
     flex-direction: column;
     justify-content: space-around;
 }
-
+//legg i admin.js
+.avatar-img {
+    border-radius: 50%;
+    width: 40%;
+    margin-left: 52px;
+}
+//legg i admin.js
 .search-box {
     width: 150px;
     height: auto;
@@ -59,6 +65,11 @@
     border-top:  16px solid brown;
     height: 120px;
     animation: spin 2s linear infinite;
+}
+
+.admin-submit-btn {
+    margin-left: 0;
+    margin-top: 27px;
 }
 
 @keyframes spin {
@@ -90,6 +101,47 @@
         
     }
    
+input {
+    margin-top: 8px;
+    width: 70%;
+    padding: 9px;
+    font-size: 16px;
+}
+
+.message-container {
+    width: 288px;
+    justify-content: center;
+    margin-left: 45px;
+}
+
+form {
+    background: getColour(white);
+    padding: 4px;
+    border-radius: 1px;
+}
+
+label {
+    margin-top: 1rem;
+    display: block;
+}
+
+.form-error {
+    display: none;
+    margin-top: 4px;
+    color: red;
+    font-size: larger;
+}
+ //slette??
+.message.error {
+    color: red;
+    border-color: red;
+}
+
+.message.success {
+    color: green;
+    border-color: green;
+}
+
  @media only screen and (min-width :375px) {
      .cover-image {
          height: 250px;

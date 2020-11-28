@@ -11,24 +11,48 @@ export function getExistingFavs() {
 }
 //CART
 
+const keyToken ="token";
+//EMAIL?
+const keyUser = "user";
+
+export function storeToken(token) {
+saveStorage(keyToken, token);
+}
+
+
+export function getToken() {
+   return getFromStorage(keyToken);
+}
+
+export function userSave(user) {
+    saveStorage(keyUser, user);
+}
+
+export function getUserName() {
+    const user = getFromStorage(keyUser);
+
+    if(user) {
+        return user.username;
+    }
+
+    return null;
+}
 
 
 
+function saveStorage(key, value) {
+    localStorage.setItem(key, JSON.stringify(value));
+}
 
+    function getFromStorage(key) {
+        const value = localStorage.getItems(key);
 
+        if(!value) {
+            return [];
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
+        return JSON.parse(value);
+    }
 
 
 
@@ -60,7 +84,7 @@ export function getExistingFavs() {
         }
     }
     catch (error) {
-    console.log("token stored <3");
+    console.log("token stored");
         }
 
 export { doLogin, storeToken };*/

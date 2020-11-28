@@ -1,37 +1,72 @@
+import {hamburgerMenu} from "./hamburger.js";
 import displayMessage from "./components/common/displayMessage.js";
 import { url } from "./components/api.js";
+import { storeToken, userSave } from "./components/common/storage.js";
+
+
 
 const form = document.querySelector("form");
 const username = document.querySelector("#username");
+const username = document.querySelector("#email");
 const password = document.querySelector("#password");
 const message = document.querySelector(".message-container");
 
 form.addEventListener("submit", formSubmit);
 
-
 function formSubmit(event) {
     event.preventDefault();
 
-   const valueUsername = username.value.trim();
-   const valuePassword = password.value.trim();
+    message.innerHTML = "";
 
-   if(valueUsername.length === 0 || valuePassword.length === 0) {
-       displayMessage("warning", "add a valid value", ".message-container");
-   }
+    const valueUsername = username.value.trim();
+    const valueEmail = email.value.trim();
+    const valuePassword = password.value.trim();
+  
+    if(valueUsername.length === 0 || valuePassword.length === 0 || valueEmail.length === 0) {
+       return displayMessage("warning", "add a valid value", ".message-container");
+    }
+
+    doLogin(valueUsername, valueEmail, valuePassword);
+
 }
 
+async function doLogin(username, email, password) {
 
+        const adminUrl = url + "auth/local"; //???
 
+        const data = JSON.stringify({ identifier: username, email: email, password: password});
 
+        const options = {
+            method: "POST",
+            body: data,
+            headers: {
+                "Content-Type": "application/json"
+            }
+        };
 
+        try {
+            const response = await fetch(adminurl, options);
+            const json = response.json();
 
+            console.log(json);
 
+            if(json.user) {
+            displayMessage("success", "Successfully logged in", ".message-container");
 
+            tokenSave(json.jwt);
+            userSave(json.user);
 
+            location.href = "admin.html";
+        }
 
+       if (json.error) {
+            displayMessage("warning", "Invalid login detail", ".message.container");
+        }
 
-
-
+     } catch(error) {
+            console.log(error);
+    }
+}
 
 
 
