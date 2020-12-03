@@ -12,27 +12,27 @@ body {
 }
 
 h1 {
-  font-size: 1.8em;
-  margin-top: 45px;
-  margin-left: 59px;
+  font-size: 1.7em;
+  margin-top: 27px;
+  margin-left: 60px;
   color: #191919;
   font-family: "open sans", sans-serif;
-  margin-bottom: 38px;
+  margin-bottom: 6px;
 }
 
 h4 {
   margin-top: 45px;
   margin-bottom: 15px;
-  margin-left: 29px;
-  font-size: 1.5em;
+  margin-left: 31px;
+  font-size: 1.3em;
   font-family: "open sans", sans-serif;
   color: #191919;
 }
 
 p {
   margin-bottom: 30px;
-  margin-left: 29px;
-  font-size: 1.3em;
+  margin-left: 31px;
+  font-size: 0.9em;
   font-weight: bold;
   font-family: "open sans", sans-serif;
   color: #191919;
@@ -40,10 +40,14 @@ p {
 
 .add-to-cart {
   width: 206px;
-  height: 45px;
   text-align: center;
   margin-left: 30px;
   margin-bottom: 105px;
+}
+
+.cart-header {
+  margin-left: 30px;
+  margin-bottom: 45px;
 }
 
 .message {
@@ -51,6 +55,11 @@ p {
   color: #d9d2d5;
   margin-top: 1rem;
   padding: 1rem;
+}
+
+.cart-container {
+  font-size: 1.2em;
+  margin-left: 30px;
 }
 
 .footer-text {
@@ -126,20 +135,20 @@ nav li a {
   text-align: center;
   padding: 10px 10px 0px 10px;
   text-decoration: none;
-  font-size: 1.3em;
-  width: 355px;
+  font-size: 1.2em;
+  width: 301px;
   height: 70px;
   font-family: "open sans", sans-serif;
   font-weight: bold;
 }
 
 nav li a:hover:not(.active) {
-  background-color: #83654A;
+  background-color: #b9aaab;
 }
 
 nav li a.active {
   color: white;
-  background-color: #83654A;
+  background-color: #b9aaab;
 }
 
 .login-button-toggle {
@@ -159,6 +168,15 @@ nav li a.active {
   width: auto;
 }
 
+@media only screen and (min-width: 768px) {
+  ul.menu-links {
+    top: -3px;
+  }
+  nav li a {
+    width: 748px;
+  }
+}
+
 @media only screen and (min-width: 1366px) {
   .logo {
     height: 26px;
@@ -168,6 +186,12 @@ nav li a.active {
   nav .hamburger {
     right: 34px;
     top: 34px;
+  }
+  nav li a {
+    width: 1668px;
+  }
+  h1 {
+    margin-left: 304px;
   }
 }
 
@@ -239,12 +263,13 @@ nav li a.active {
 .avatar-img {
   border-radius: 50%;
   width: 40%;
-  margin-left: 52px;
+  margin-left: 78px;
+  margin-top: 45px;
 }
 
 .search-box {
-  width: 150px;
-  height: auto;
+  width: 188px;
+  height: 18px;
   border-radius: 6px;
   margin-left: 58px;
 }
@@ -257,11 +282,6 @@ nav li a.active {
   height: 120px;
   -webkit-animation: spin 2s linear infinite;
           animation: spin 2s linear infinite;
-}
-
-.admin-submit-btn {
-  margin-left: 0;
-  margin-top: 27px;
 }
 
 @-webkit-keyframes spin {
@@ -291,7 +311,7 @@ footer {
   height: 187px;
   margin-top: 144px;
   width: 100%;
-  background-color: #83654A;
+  background-color: #b9aaab;
   font-family: "open sans", sans-serif;
   font-size: 1.2em;
   text-align: center;
@@ -301,23 +321,30 @@ footer {
 footer .text-footer {
   font-size: 0.8em;
   color: white;
-  font-weight: 500;
-  padding-top: 45px;
+  font-weight: 600;
 }
 
+/*FOOTER*/
 input {
   margin-top: 8px;
-  width: 70%;
+  width: 80%;
   padding: 9px;
   font-size: 16px;
+  margin-left: 15px;
+  border-radius: 4px;
+}
+
+.admin-submit-btn {
+  margin-top: 27px;
+  width: 88%;
 }
 
 .message-container {
-  width: 288px;
+  width: 271px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 45px;
+  margin-left: 19px;
 }
 
 form {
@@ -329,6 +356,25 @@ form {
 label {
   margin-top: 1rem;
   display: block;
+  margin-left: 15px;
+  font-size: 1em;
+  font-family: "ubuntu", sans-serif;
+}
+
+.log-out {
+  width: 45%;
+  height: 35px;
+  background-color: #83654A;
+  font-size: 16px;
+  padding: 0pt;
+}
+
+.admin-btn {
+  width: 45%;
+  height: 35px;
+  margin-left: 16px;
+  font-size: 16px;
+  padding: 0pt;
 }
 
 .form-error {
@@ -386,44 +432,56 @@ label {
   }
   .product-images {
     width: 375px;
+    margin-left: 331px;
   }
 }
 
-/*
- .login-hidden {
-    display: none;
+.message-container {
+  background-color: #d9d2d5;
 }
 
-.login-button-toggle {
-    width: auto;
-}*/
 button {
-  background-color: #257363;
+  background-color: #0baa8a;
   color: #fcfcfc;
   margin: 8px 0;
-  padding: 14px 20px;
+  padding: 6px 20px;
   margin-left: 30px;
   border: none;
   cursor: pointer;
-  width: 77%;
+  width: 81%;
   font-family: "ubuntu", sans-serif;
   margin-bottom: 65px;
-  margin-top: 45px;
+  margin-top: 15px;
+  font-size: 1.2em;
+  border-radius: 4px;
 }
 
 button button:hover {
   opacity: 0.8;
 }
 
-button .message.success {
+button .success {
   color: green;
   border-color: green;
+  background: #b9aaab;
+}
+
+button .error {
+  color: red;
+  border-color: green;
+  background: #b9aaab;
+}
+
+button .warning {
+  color: orange;
+  border-color: orange;
+  background: #b9aaab;
 }
 
 button .cancelbtn {
   padding: 10px 18px;
   width: auto;
-  background-color: #257363;
+  background-color: #0baa8a;
 }
 
 button .imageContainer {
@@ -477,10 +535,6 @@ button .animate {
   animation: animatezoom 0.6s;
 }
 
-button .productView {
-  font-size: 3em;
-}
-
 @-webkit-keyframes animatezoom {
   from {
     -webkit-transform: scale(0);
@@ -525,6 +579,23 @@ button input[type=text], button input[type=password] {
   button {
     margin-left: 219px;
     width: 36%;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  h1 {
+    margin-left: 362px;
+    font-size: 2.7em;
+  }
+  .product-images {
+    width: 346px;
+  }
+  button {
+    margin-left: 331px;
+    width: 34%;
+  }
+  h4, p {
+    margin-left: 333px;
   }
 }
 

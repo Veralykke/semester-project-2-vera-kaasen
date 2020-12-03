@@ -40,7 +40,6 @@ favourites.forEach((details) => {
     
         container.innerHTML += `
         <div id="product-${details.id}" class="product">
-
             <h4>${details.title}</h4>
             <p>Price: ${details.price}</p>
             <img class="product-images" src="http://localhost:1337${details.image.url}" alt="product-images">
@@ -56,12 +55,12 @@ favourites.forEach((details) => {
 
         const favButton = document.querySelector(".add-to-cart");
         favButton.addEventListener("click", handleClick);
+        console.log("Clicked");
     }
         catch (error) {
             displayMessage("error", error, ".detail-container");
         }
 })();
-
 
   function handleClick(event) {
     const id = this.dataset.id;
@@ -92,8 +91,25 @@ favourites.forEach((details) => {
 }
  
 function saveFavs(favs) {
-    localStorage.setItem("favourites", JSON.stringify(favs));
+    localStorage.setItem("favourites", JSON.stringify(favs)); //we have to "stringify it"
 }
+//TESTE SUM CART
+
+/*function getTotalPrice() {
+    var totalPrice = 0;
+    $("").find(".price").each(function() {
+    totalPrice += parseFloat($(this());
+    });
+    return totalPrice;
+}
+
+function updateCart() {
+    $("").html (getTotalCost() );
+}*/
+
+//TESTE SUM CART
+
+
 
 
 /*ADD TO CART* NY MÅTE 

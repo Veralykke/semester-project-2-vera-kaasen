@@ -4,7 +4,6 @@ import { searchProducts } from "./components/common/searchProducts.js";
 
 /*import { displayMessage } from "./components/common/displayMessage.js";*/
 
-
 /* NY API VERSjON */
 /*Adding HTML(json) function here*/
 
@@ -45,7 +44,8 @@ function HTML(json) {
         </div>`;
     });
 
-    const products = document.querySelectorAll(".product button");
+    //select all buttons and linking them by the "click" event to the "detailpage", with help from the id. 
+    const products = document.querySelectorAll(".product button"); 
     products.forEach(function(product){
         product.addEventListener("click", viewDetails);
     });

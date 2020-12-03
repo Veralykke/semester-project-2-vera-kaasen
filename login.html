@@ -8,9 +8,11 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=PT+Sans&family=Ubuntu:wght@300&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script type="module" src="js/components/common/displayMessage.js"></script>
-    <script type="module" src="js/products.js"></script>
-    <title>Products</title>
+    <script type="module" src="js/script.js"></script>
+
+
+    <title>Login</title>
+
 </head>
 
 <body>
@@ -24,6 +26,7 @@
                 <span class="bar two"></span>
                 <span class="bar tree"></span>
             </span>
+
             <ul class="menu-links">
                 <li><a href="index.html" class="active">HOME</a></li>
                 <li><a href="products.html">PRODUCTS</a></li>
@@ -34,14 +37,33 @@
     </header>
 
     <main>
-        <!--<div class="loader"></div>-->
         <div class="container">
-            <input class="search-box" placeholder="Search.." />
-            <h1>Our products</h1>
-            <div class="product-container">Loading...</div>
+            <div class="admin-container"></div>
+
+            <div class="loading">loading...</div>
+
+            <h1>Login</h1>
+
+            <form>
+                <div class="message-container">
+                    <img class="avatar-img" src="./img/avatar.png" alt="avatar-img">
+                    <div>
+                        <div>
+                            <label for="username">Username</label>
+                            <input id="username" />
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input id="email" />
+                        </div>
+                        <div>
+                            <label for="password">Password</label>
+                            <input id="password" />
+                            <button class="admin-submit-btn">Submit</button>
+                        </div>
+            </form>
         </div>
     </main>
-
     <footer>
         <span class="text-footer">Copyright 2020</span>
         <a href="/">Terms & Conditions</a>

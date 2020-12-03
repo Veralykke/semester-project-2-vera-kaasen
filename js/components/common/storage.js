@@ -11,14 +11,14 @@ export function getExistingFavs() {
 }
 //CART
 
+//Log in and save password
 const keyToken ="token";
 //EMAIL?
 const keyUser = "user";
 
-export function storeToken(token) {
-saveStorage(keyToken, token);
+export function storeToken(token) { //saveToken
+saveStorage(keyToken, token); //saveToStorage
 }
-
 
 export function getToken() {
    return getFromStorage(keyToken);
@@ -38,14 +38,12 @@ export function getUserName() {
     return null;
 }
 
-
-
 function saveStorage(key, value) {
     localStorage.setItem(key, JSON.stringify(value));
 }
 
     function getFromStorage(key) {
-        const value = localStorage.getItems(key);
+        const value = localStorage.getItem(key);
 
         if(!value) {
             return [];
@@ -54,8 +52,7 @@ function saveStorage(key, value) {
         return JSON.parse(value);
     }
 
-
-
+//
 
 
 

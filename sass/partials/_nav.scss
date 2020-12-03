@@ -41,20 +41,20 @@ nav {
         text-align: center;
         padding: 10px 10px 0px 10px;
         text-decoration: none;
-        font-size: 1.3em;
-        width: 355px;
+        font-size: 1.2em;
+        width: 301px;
         height: 70px;
         font-family: $font-primary;
         font-weight: bold;
     }
     
     li a:hover:not(.active) {
-        background-color: getColour(brown);
+        background-color: getColour(secondary);
     }
    
     li a.active {
         color: white;
-        background-color: getColour(brown);
+        background-color: getColour(secondary);
     }
 
 }
@@ -73,6 +73,16 @@ font-size: 1em;
     width: auto;
 }
 
+@media only screen and (min-width : 768px) {
+   ul.menu-links {
+       top: -3px;
+   }
+   nav li a {
+       width: 748px;
+   }
+}
+
+
 @media only screen and (min-width : 1366px) {
     .logo {
         height: 26px;
@@ -83,6 +93,12 @@ font-size: 1em;
     nav .hamburger {
         right: 34px;
         top: 34px;
+    }
+    nav li a {
+        width: 1668px;
+    }
+    h1 {
+        margin-left: 304px;
     }
 }
 

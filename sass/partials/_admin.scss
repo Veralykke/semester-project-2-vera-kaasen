@@ -1,34 +1,43 @@
 
-/*
- .login-hidden {
-    display: none;
+.message-container {
+    background-color: getColour(primary);
 }
-
-.login-button-toggle {
-    width: auto;
-}*/
-
 button {
     background-color: getColour(accent);
     color: getColour(white);
     margin: 8px 0;
-    padding: 14px 20px; 
+    padding: 6px 20px; 
     margin-left: 30px;
     border: none;
     cursor: pointer;
-    width: 77%;
+    width: 81%;
     font-family: $font-details;
     margin-bottom: 65px;
-    margin-top: 45px;
+    margin-top: 15px;
+    font-size: 1.2em;
+    border-radius: 4px;
     
 
 button:hover {
     opacity: 0.8;
 }
 
-.message.success {
+.success {
     color: green;
     border-color: green;
+    background:getColour(secondary);
+}
+
+.error {
+    color: red;
+    border-color: green;
+    background:getColour(secondary);
+}
+
+.warning {
+    color: orange;
+    border-color: orange;
+    background:getColour(secondary);
 }
  //slette??
 .cancelbtn {
@@ -77,7 +86,6 @@ button:hover {
     font-weight: bold;
 }
 
-
 .close:hover,
 .close:focus {
     color: red;
@@ -87,10 +95,6 @@ button:hover {
 .animate {
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s;
-}
-
-.productView {
-    font-size: 3em;
 }
 
 
@@ -114,7 +118,6 @@ button:hover {
     }
 }
 
-
 input[type=text], input[type=password] {
     padding: 12px 20px;
     width: 100%;
@@ -130,5 +133,23 @@ input[type=text], input[type=password] {
     button {
         margin-left: 219px;
         width: 36%;
+    }
+}
+
+@media only screen and (min-width : 1366px) 
+{
+    h1 {
+        margin-left: 362px;
+        font-size: 2.7em;
+    }
+    .product-images {
+        width: 346px;
+    }
+    button {
+        margin-left: 331px;
+        width: 34%;
+    }
+    h4, p {
+        margin-left: 333px;
     }
 }

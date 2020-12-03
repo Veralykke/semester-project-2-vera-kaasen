@@ -9,13 +9,13 @@ clearbtn();
 
 const results = document.querySelector(".cart-container");
 
-if (favourites.length == 0) {
+if (favourites.length === 0) {
     results.innerHTML = " You have nothing in your cart yet";
 } else {
     results.innerHTML = "";
     favourites.forEach((details) => {
         results.innerHTML += `
-            <div id="product-${details.id}" class="product"
+            <div id="product-${details.id}" class="product">
                 <h4>${details.name}</h4>    
                 <p>Price: ${details.price}</p>
                 <img class="product-images" src="${details.image}">

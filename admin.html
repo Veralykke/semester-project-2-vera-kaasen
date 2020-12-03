@@ -31,36 +31,32 @@
                 <li><a href="index.html" class="active">HOME</a></li>
                 <li><a href="products.html">PRODUCTS</a></li>
                 <li><a href="cart.html">CART</a></li>
-                <li><a href="admin.html">ADMIN</a></li>
+                <li><a href="login.html">LOGIN</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <button class="log-out">Log out</button>
         <div class="container">
             <div class="admin-container"></div>
-
             <div class="loading">loading...</div>
-
-            <h1>Login</h1>
-
+            <h1>Add products</h1>
             <form>
-                <div class="message-container">
-                    <img class="avatar-img" src="./img/avatar.png" alt="avatar-img">
-                    <div>
-                        <div>
-                            <label for="username">Username</label>
-                            <input id="username" />
-                        </div>
-                        <div>
-                            <label for="email">Email</label>
-                            <input id="email" />
-                        </div>
-                        <div>
-                            <label for="password">Password</label>
-                            <input id="password" />
-                        </div>
-                        <button class="admin-submit-btn">Submit</button>
+                <div class="message-container"></div>
+                <div>
+                    <label for="title">Title</label>
+                    <input id="title">
+                </div>
+                <div>
+                    <label for="price">Price</label>
+                    <input id="price">
+                </div>
+                <div>
+                    <label for="description">Description</label>
+                    <input id="description">
+                </div>
+                <button class="admin-btn">Add</button>
             </form>
         </div>
     </main>

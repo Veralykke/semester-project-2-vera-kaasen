@@ -49,12 +49,13 @@
 .avatar-img {
     border-radius: 50%;
     width: 40%;
-    margin-left: 52px;
+    margin-left: 78px;
+    margin-top: 45px;
 }
 //legg i admin.js
 .search-box {
-    width: 150px;
-    height: auto;
+    width: 188px;
+    height:18px;
     border-radius: 6px;
     margin-left: 58px;
 }
@@ -67,10 +68,6 @@
     animation: spin 2s linear infinite;
 }
 
-.admin-submit-btn {
-    margin-left: 0;
-    margin-top: 27px;
-}
 
 @keyframes spin {
     0% {
@@ -82,36 +79,44 @@
 }
 
 /*FOOTER*/
-    footer {
+footer {
         height: 187px;
         margin-top: 144px;
         width: 100%;
-        background-color:getColour(brown);
+        background-color:getColour(secondary);
         font-family: $font-primary;
         font-size: 1.2em;
         text-align: center;
         left:0;
-        
-        .text-footer {
-            font-size: 0.8em;
-            color: white;
-            font-weight: 500;
-            padding-top: 45px;
+
+.text-footer {
+        font-size: 0.8em;
+        color: white;
+        font-weight: 600;
+          
         }
-        
-    }
+    }    
+ /*FOOTER*/   
    
 input {
     margin-top: 8px;
-    width: 70%;
+    width: 80%;
     padding: 9px;
     font-size: 16px;
+    margin-left: 15px;
+    border-radius: 4px;
+}
+
+.admin-submit-btn {
+
+    margin-top: 27px;
+    width: 88%;
 }
 
 .message-container {
-    width: 288px;
+    width: 271px;
     justify-content: center;
-    margin-left: 45px;
+    margin-left: 19px;
 }
 
 form {
@@ -123,8 +128,26 @@ form {
 label {
     margin-top: 1rem;
     display: block;
+    margin-left: 15px;
+    font-size: 1em;
+    font-family: $font-details;
 }
+ .log-out {
+     width: 45%;
+     height: 35px;
+     background-color: getColour(brown);
+     font-size: 16px;
+     padding: 0pt;
+ }
 
+ .admin-btn  {
+    width: 45%;
+    height: 35px;
+    margin-left: 16px;
+    font-size: 16px;
+    padding: 0pt;
+    
+}
 .form-error {
     display: none;
     margin-top: 4px;
@@ -182,6 +205,8 @@ label {
     }
     .product-images {
         width: 375px;
+        margin-left: 331px;
     }
+    
 
 }
