@@ -7,8 +7,6 @@ import { searchProducts } from "./components/common/searchProducts.js";
 /* NY API VERSjON */
 /*Adding HTML(json) function here*/
 
-const search = document.querySelector(".search-box");
-
 const renderProductsUrl = url + "products";
 
 (async function() {

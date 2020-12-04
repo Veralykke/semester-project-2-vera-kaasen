@@ -1,6 +1,7 @@
 import { renderProducts } from "./renderProducts.js";
 
 export function searchProducts(products) {
+    
     const search = document.querySelector(".search-box");
 
     search.onkeyup = function () {

@@ -74,7 +74,6 @@ favourites.forEach((details) => {
         return fav.id === id;
     });
     
-
     /* if cart is empty and first time
        make an array and add it to the card and store the localStorage
        else just save directly to storage */
@@ -93,24 +92,6 @@ favourites.forEach((details) => {
 function saveFavs(favs) {
     localStorage.setItem("favourites", JSON.stringify(favs)); //we have to "stringify it"
 }
-//TESTE SUM CART
-
-/*function getTotalPrice() {
-    var totalPrice = 0;
-    $("").find(".price").each(function() {
-    totalPrice += parseFloat($(this());
-    });
-    return totalPrice;
-}
-
-function updateCart() {
-    $("").html (getTotalCost() );
-}*/
-
-//TESTE SUM CART
-
-
-
 
 /*ADD TO CART* NY MÅTE 
 
@@ -128,7 +109,7 @@ function addCart(productId){
     /* Here we display the product title */
     //console.log(parsedData.title);
 
-    /* 
+    /*
         When we finish the function and make it add more products to the cart.
         It will be an array of objects, and we do an forEach loop on all producs and render it
         Just like we have in the 'fetch' to show the HTML (or as above)
@@ -138,3 +119,18 @@ function addCart(productId){
 //window.addCart = addCart;
 
 
+//TESTE SUM CART
+
+/*function getTotalPrice() {
+    var totalPrice = 0;
+    $("").find(".price").each(function() {
+    totalPrice += parseFloat($(this());
+    });
+    return totalPrice;
+}
+
+function updateCart() {
+    $("").html (getTotalCost() );
+}*/
+
+//TESTE SUM CART
