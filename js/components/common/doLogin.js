@@ -1,18 +1,17 @@
-import {hamburgerMenu} from "./hamburger.js";
+import { hamburgerMenu } from "./hamburger.js";
 import displayMessage from "./components/common/displayMessage.js";
 import { url } from "./components/api.js";
 import { storeToken, userSave } from "./components/common/storage.js";
 
 const form = document.querySelector("form");
 const username = document.querySelector("#username");
-const username = document.querySelector("#email");
+const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const message = document.querySelector(".message-container");
 
 form.addEventListener("submit", formSubmit);
 
 function formSubmit(event) {
-    
     event.preventDefault();// prevent default behavior
 
     message.innerHTML = "";
@@ -22,7 +21,7 @@ function formSubmit(event) {
     const valuePassword = password.value.trim();
   
     if(valueUsername.length === 0 || valueEmail.length === 0 || valuePassword.length === 0) {
-       return displayMessage("warning", "add a valid value", ".message-container");
+       return displayMessage("warning", "Add a valid value", ".message-container");
     }
 
     doLogin(valueUsername, valueEmail, valuePassword);
@@ -31,7 +30,7 @@ function formSubmit(event) {
 
 async function doLogin(username, email, password) {
 
-        const adminUrl = url + "auth/local"; //???
+        const adminUrl = url + "auth/local"; 
 
         const data = JSON.stringify({ identifier: username, email: email, password: password});
 
@@ -46,12 +45,10 @@ async function doLogin(username, email, password) {
         try {
             const response = await fetch(adminUrl, options);
             const json = response.json();
-
             console.log(json);
 
             if(json.user) {
-            //displayMessage("success", "Successfully logged in", ".message-container");
-
+                displayMessage("success", "Successfully logged in", ".message-container");
             tokenSave(json.jwt); //saveToken
             userSave(json.user);
 
@@ -59,7 +56,7 @@ async function doLogin(username, email, password) {
         }
 
        if (json.error) {
-            displayMessage("warning", "Invalid login detail", ".message.container");
+            //displayMessage("warning", "Invalid login detail", ".message.container");
         }
 
      } catch(error) {

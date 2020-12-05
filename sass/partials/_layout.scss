@@ -26,17 +26,31 @@
     justify-content: space-between;
 }
  /*SETT SAMMEN*/
-.product{
+ .productView {
+    font-size: 1.3em;
+    margin-left: 30px;
+    background-color: #0baa8a;
+    color: white;
+    padding: 12px 89px 12px 74px;
+    border-radius: 5px;
+    font-family: "ubuntu", sans-serif;
     text-decoration: none;
-}
+ }
+
+ #clearButton {
+    background-color: orange;
+    width: 209px;
+    margin-top:19px;
+ }
+ 
 .product-images {
     justify-content: space-around;
     border: 1px solid getColour(primary);
     width: 206px;
     height: auto;
-    margin-bottom: 14px;
+    margin-bottom: 4px;
     margin-left: 29px;
-    box-shadow: 0px 0px 26px -2px getColour(secondary);
+    box-shadow: 9px 9px 22px -9px #b9aa;
 }
 .container {
     margin: 0 auto;
@@ -190,8 +204,15 @@ label {
     }
     .product-images {
         margin-left: 217px;
+        margin-bottom: 57px;
     } 
-    
+    .productView {
+       margin-left: -255px;
+       padding: 12px 110px 12px 98px;
+    }
+    #clearButton {
+        width: 252px;
+    }
 }
 
 @media only screen and (min-width : 1366px) {

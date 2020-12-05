@@ -61,7 +61,7 @@ p {
     padding: 1rem;
 }
 .cart-container {
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin-left: 30px;
 }
 .footer-text {
@@ -69,8 +69,22 @@ p {
     font-size: 2em;
 }
 @media only screen and (min-width : 768px)  {
+    
     h4, p {
         margin-left: 217px; 
     }
+    .add-to-cart {
+        margin-left: 217px;
+    }
    
 }
+
+
+@media only screen and (min-width : 1366px) {
+
+    .add-to-cart {
+        margin-left: 334px;
+    }
+}
+
+

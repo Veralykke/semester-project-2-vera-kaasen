@@ -1,3 +1,4 @@
+import {hamburgerMenu} from "./hamburger.js";
 import clearbtn from "./components/common/clearButton.js";
 import { getExistingFavs } from "./components/common/storage.js";
 
@@ -19,10 +20,11 @@ if (favourites.length === 0) {
                 <h4>${details.name}</h4>    
                 <p>Price: ${details.price}</p>
                 <img class="product-images" src="${details.image}">
-                <a class="productView" href="detail.html?id=${details.id}">Product view</a>
-                <button id="clearButton" type="button">Delete product</button>
+                <a class="productView" href="detail.html?id=${details.id}">View</a>
             </div>`;
     });
 }
 
+
+//MANGLER TOTAL PRICE
 

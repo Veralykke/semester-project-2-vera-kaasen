@@ -12,18 +12,17 @@ if (!id) {
 
 const productDetailUrl = url + "products/" + id;
 
-
 const favourites = getExistingFavs();
 favourites.forEach((details) => {
-     //SLETTE?
-    let cssClass = "prodB";
+    
+    let cssClass = "prodB";//SLETTE
 //does the product exist in the favprod array
     const doesObjectExist = favourites.find(function (fav) {
         return parseInt(fav.id) === details.id;
     });
-//SLETTE? 
+
     if (doesObjectExist) {
-        cssClass ="pro";
+        cssClass ="pro"; //SLETTE
     }
 });
 
@@ -117,7 +116,6 @@ function addCart(productId){
 //}
 
 //window.addCart = addCart;
-
 
 //TESTE SUM CART
 

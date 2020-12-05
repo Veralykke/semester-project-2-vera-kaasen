@@ -1,4 +1,4 @@
-//CART
+//ADD TO CART
 export function getExistingFavs() {
     const favProd = localStorage.getItem("favourites");
 
@@ -9,11 +9,10 @@ export function getExistingFavs() {
         return JSON.parse(favProd);
     }
 }
-//CART
+//ADD TO CART
 
 //Log in and save password
 const keyToken ="token";
-//EMAIL?
 const keyUser = "user";
 
 export function storeToken(token) { //saveToken
@@ -51,10 +50,6 @@ function saveStorage(key, value) {
 
         return JSON.parse(value);
     }
-
-//
-
-
 
 
 /*LOG IN NY MÅTE */

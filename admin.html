@@ -9,8 +9,6 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script type="module" src="js/script.js"></script>
-
-
     <title>Admin</title>
 
 </head>
@@ -38,11 +36,14 @@
 
     <main>
         <button class="log-out">Log out</button>
+
         <div class="container">
             <div class="admin-container"></div>
             <div class="loading">loading...</div>
+
             <h1>Add products</h1>
-            <form>
+
+            <form class="form" action=".upload" method="post">
                 <div class="message-container"></div>
                 <div>
                     <label for="title">Title</label>
@@ -59,6 +60,12 @@
                 <button class="admin-btn">Add</button>
             </form>
         </div>
+
+        <form>
+            <input type="file" name="files" />
+            <input type="submit" name="Submit" />
+        </form>
+
     </main>
     <footer>
         <span class="text-footer">Copyright 2020</span>

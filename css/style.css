@@ -58,7 +58,7 @@ p {
 }
 
 .cart-container {
-  font-size: 1.2em;
+  font-size: 1.3em;
   margin-left: 30px;
 }
 
@@ -70,6 +70,15 @@ p {
 @media only screen and (min-width: 768px) {
   h4, p {
     margin-left: 217px;
+  }
+  .add-to-cart {
+    margin-left: 217px;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  .add-to-cart {
+    margin-left: 334px;
   }
 }
 
@@ -230,8 +239,21 @@ nav li a.active {
 }
 
 /*SETT SAMMEN*/
-.product {
+.productView {
+  font-size: 1.3em;
+  margin-left: 30px;
+  background-color: #0baa8a;
+  color: white;
+  padding: 12px 89px 12px 74px;
+  border-radius: 5px;
+  font-family: "ubuntu", sans-serif;
   text-decoration: none;
+}
+
+#clearButton {
+  background-color: orange;
+  width: 209px;
+  margin-top: 19px;
 }
 
 .product-images {
@@ -240,10 +262,10 @@ nav li a.active {
   border: 1px solid #d9d2d5;
   width: 206px;
   height: auto;
-  margin-bottom: 14px;
+  margin-bottom: 4px;
   margin-left: 29px;
-  -webkit-box-shadow: 0px 0px 26px -2px #b9aaab;
-          box-shadow: 0px 0px 26px -2px #b9aaab;
+  -webkit-box-shadow: 9px 9px 22px -9px #b9aa;
+          box-shadow: 9px 9px 22px -9px #b9aa;
 }
 
 .container {
@@ -418,6 +440,14 @@ label {
   }
   .product-images {
     margin-left: 217px;
+    margin-bottom: 57px;
+  }
+  .productView {
+    margin-left: -255px;
+    padding: 12px 110px 12px 98px;
+  }
+  #clearButton {
+    width: 252px;
   }
 }
 
@@ -452,7 +482,7 @@ button {
   font-family: "ubuntu", sans-serif;
   margin-bottom: 65px;
   margin-top: 15px;
-  font-size: 1.2em;
+  font-size: 1.3em;
   border-radius: 4px;
 }
 
