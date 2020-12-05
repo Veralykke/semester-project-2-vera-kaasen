@@ -38,8 +38,8 @@ async function doLogin(username, email, password) {
             method: "POST",
             body: data,
             headers: {
-                "Content-Type": "application/json"
-            }
+                "Content-Type": "application/json",
+            },
         };
 
         try {

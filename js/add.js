@@ -22,7 +22,39 @@ function formSubmit(event) {
     const priceValue = parseFloat(price.value);
     const descriptionValue = description.value.trim();
 
-    if(titleValue.length === 0 || priceValue.length === 0 descriptionValue.length === 0) {
-        displayMessage("warning", "Please add proper values", "message-container");
+    console.log("priceValue", priceValue);
+
+    if(titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0) {
+         return displayMessage("warning", "Please add proper values", "message-container");
+    }
+
+    addProduct(titleValue, priceValue, descriptionValue);
+}
+
+async function addProduct(title, price, description) {
+
+    const url = url + "products";
+
+    const data = JSON.stringify({ title: title, price: price, description: description });
+
+    const token = getToken();
+
+    const options = {
+        method: "POST",
+        body: data,
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `# ${token}`//?????????????????????????????
+        },
+    };
+
+    try {
+        const respone =  await fetch(url, options);
+        const json = await response.json();
+
+        console.log(json);
+    }
+    catch (error) {
+        console.log(error)
     }
 }
