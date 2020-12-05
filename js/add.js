@@ -5,23 +5,24 @@ import { url } from "./components/api.js";
 
 makeMenu();
 
-/*
-<div class="container">
-<div class="admin-container"></div>
-<div class="loading">loading...</div>
+const form = document.querySelector("form");
+const title = document.querySelector("#title");
+const price = document.querySelector("#price");
+const description = document.querySelector("#description");
+const adminMessage = document.querySelector(".message-container");
 
-<h1>Add products</h1>
+form.addEventListener(".submit", submitForm);
 
-<form class="form" action=".upload" method="post">
-    <div class="message-container"></div>
-    <div>
-        <label for="title">Title</label>
-        <input id="title">
-    </div>
-    <div>
-        <label for="price">Price</label>
-        <input id="price">
-    </div>
-    <div>
-        <label for="description">Description</label>
-        <input id="description">*/
+function formSubmit(event) {
+    event.preventDefault();
+
+    adminMessage.innerHTML = "";
+
+    const titleValue = title.nodeValue.trim();
+    const priceValue = parseFloat(price.value);
+    const descriptionValue = description.value.trim();
+
+    if(titleValue.length === 0 || priceValue.length === 0 descriptionValue.length === 0) {
+        displayMessage("warning", "Please add proper values", "message-container");
+    }
+}
