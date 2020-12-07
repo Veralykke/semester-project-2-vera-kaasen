@@ -15,9 +15,9 @@ function createMessage(type = "success", message ="No message") {
     return html;
 }
 
-
+/* 
 const containerMessage = document.querySelector(".container-message");
 
 const message = createMessage("warning", "Something went wrong");
 
-containerMessage.innerHTML = message;
+containerMessage.innerHTML = message; */

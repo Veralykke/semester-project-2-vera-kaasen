@@ -133,6 +133,9 @@ input {
     margin-left: 19px;
 }
 
+.admin-form {
+    display: none;
+}
 form {
     background: getColour(white);
     padding: 4px;

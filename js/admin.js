@@ -15,7 +15,6 @@ request.send(new FormData(formElement));
 });
 
 <button id="clearButton" type="button">Delete</button> 
-
 // CODE FROM -------------> https://strapi.io/documentation/3.0.0-beta.x/plugins/upload.html#upload-files 
 
 //TESTE

@@ -66,5 +66,6 @@ async function addProduct(title, price, description) {
     }
     catch (error) {
         console.log(error)
+        displayMessage("error", "Something wrong happened", ".message-container");
     }
 }

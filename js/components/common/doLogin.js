@@ -1,7 +1,7 @@
-import { hamburgerMenu } from "./hamburger.js";
-import displayMessage from "./components/common/displayMessage.js";
-import { url } from "./components/api.js";
-import { storeToken, userSave } from "./components/common/storage.js";
+import { hamburgerMenu } from "../../hamburger.js";
+import displayMessage from "./displayMessage.js";
+import { url } from "../api.js";
+import { storeToken, userSave } from "./storage.js";
 
 const form = document.querySelector("form");
 const username = document.querySelector("#username");
