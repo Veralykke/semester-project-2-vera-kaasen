@@ -89,8 +89,8 @@ async function productUpdate(title, price, description, id) {
             displayMessage("success", "product-created", ".message-container");
         }
 
-        if (json.updated_at) {
-            displayMessage("error", "Something wrong happened", ".message-container");
+        if (json.error) {
+            displayMessage("error", json.message, ".message-container");
         }
         
     } catch(error) {
