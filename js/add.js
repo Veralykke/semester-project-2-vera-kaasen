@@ -9,14 +9,14 @@ const form = document.querySelector("form");
 const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
-const adminMessage = document.querySelector(".message-container");
+const message = document.querySelector(".message-container");
 
 form.addEventListener(".submit", submitForm);
 
 function formSubmit(event) {
     event.preventDefault();
 
-    adminMessage.innerHTML = "";
+    message.innerHTML = "";
 
     const titleValue = title.nodeValue.trim();
     const priceValue = parseFloat(price.value);
@@ -44,7 +44,7 @@ async function addProduct(title, price, description) {
         body: data,
         headers: {
             "Content-Type": "application/json",
-            Authorization: `# ${token}`//?????????????????????????????
+            Authorization: `Bearer ${token}`//???????
         },
     };
 

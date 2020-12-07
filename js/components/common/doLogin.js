@@ -24,7 +24,7 @@ function formSubmit(event) {
        return displayMessage("warning", "Add a valid value", ".message-container");
     }
 
-    doLogin(valueUsername, valueEmail, valuePassword);
+     doLogin(valueUsername, valueEmail, valuePassword);
 
 }
 

@@ -9,7 +9,6 @@ const id = params.get("id");
 if (!id) {
     document.location.href = "/";
 }
-
 const productDetailUrl = url + "products/" + id;
 
 const favourites = getExistingFavs();
@@ -72,7 +71,6 @@ favourites.forEach((details) => {
     const productExist = currentFavs.find(function(fav) {
         return fav.id === id;
     });
-    
     /* if cart is empty and first time
        make an array and add it to the card and store the localStorage
        else just save directly to storage */
