@@ -181,7 +181,9 @@ label {
     color: green;
     border-color: green;
 }
-
+#logoutBtn {
+width: auto;
+}
  @media only screen and (min-width :375px) {
      .cover-image {
          height: 250px;

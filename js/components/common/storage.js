@@ -37,6 +37,10 @@ export function getUserName() {
     return null;
 }
 
+export function clearStorage {
+    localStorage.clear();
+}
+
 function saveStorage(key, value) {
     localStorage.setItem(key, JSON.stringify(value));
 }
