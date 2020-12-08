@@ -22,9 +22,12 @@ if (favourites.length === 0) {
                 <img class="product-images" src="${details.image}">
                 <a class="productView" href="detail.html?id=${details.id}">View</a>
             </div>`;
+            
     });
 }
 
-
 //MANGLER TOTAL PRICE
-
+const cartTotal = parseInt(details.price)
++ parseInt(details.price);
+console.log(cartTotal);
+//MANGLER TOTAL PRICE

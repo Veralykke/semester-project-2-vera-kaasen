@@ -124,7 +124,8 @@ input {
 .admin-submit-btn {
 
     margin-top: 27px;
-    width: 88%;
+    width: 87%;
+    margin-left: 18px;
 }
 
 .message-container {
@@ -155,6 +156,7 @@ label {
      background-color: getColour(brown);
      font-size: 16px;
      padding: 0pt;
+     margin-left: 18px;
  }
 
  .admin-btn  {
@@ -211,7 +213,6 @@ width: auto;
 @media only screen and (min-width : 768px) {
     .cover-image {
         height: 512px;
-
     }
     .product-images {
         margin-left: 217px;
@@ -224,6 +225,34 @@ width: auto;
     #clearButton {
         width: 252px;
     }
+    input {
+        width: 69%;
+    }
+    label, .log-out, input, .admin-btn, h1 {
+        margin-left: 105px;
+       
+    }
+    .admin-btn{
+        width: 72%;
+    }
+    .log-out {
+        width: 271px;
+    }
+    .message-container {
+        width: 660px;
+    }
+    .avatar-img {
+        border-radius: 50%;
+        width: 20%;
+        margin-left: 257px;
+    }
+    .admin-submit-btn {
+        width: 72%;
+        margin-left: 107px;
+    }
+    nav li a {
+    width: 748px;
+    }
 }
 
 @media only screen and (min-width : 1366px) {
@@ -233,12 +262,18 @@ width: auto;
         margin-left: 303px;
     }
     h1 {
-        margin-left: 286px;
+        margin-left: 48px;
+        font-size: 2.5em;
     }
     .product-images {
         width: 375px;
         margin-left: 331px;
     }
-    
+    .log-out {
+        margin-left: 234px;
+    }
+    nav li a {
+        width: 1332px;
+        }
 
 }
