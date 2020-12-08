@@ -17,7 +17,10 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
  }
-    
+  .price-total, .price-title {
+      margin-left: 68px;
+      font-size: 2em;
+    }  
 .detail-container {
     /*display: flex;*/
     padding: 1rem;
@@ -32,7 +35,7 @@
     background-color: #0baa8a;
     color: white;
     padding: 12px 89px 12px 74px;
-    border-radius: 5px;
+    border-radius: 6px;
     font-family: "ubuntu", sans-serif;
     text-decoration: none;
  }
@@ -118,7 +121,7 @@ input {
     padding: 9px;
     font-size: 16px;
     margin-left: 15px;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 .admin-submit-btn {
@@ -132,11 +135,9 @@ input {
     width: 271px;
     justify-content: center;
     margin-left: 19px;
-    border-radius: 5px;
+    border-radius: 6px;
 }
-.admin-form {
-    //display: none;
-}
+
 form {
     background: getColour(white);
     padding: 4px;

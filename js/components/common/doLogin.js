@@ -1,17 +1,17 @@
 import { hamburgerMenu } from "../../hamburger.js";
-import displayMessage from "./displayMessage.js";
+import displayMessage from "../common/displayMessage.js";
 import { url } from "../api.js";
 import { storeToken, userSave } from "./storage.js";
 
-const form = document.querySelector("form");
+const form = document.querySelector("#login-form");
 const username = document.querySelector("#username");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const message = document.querySelector(".message-container");
 
-form.addEventListener("submit", formSubmit);
+form.addEventListener("submit", submitForm);
 
-function formSubmit(event) {
+function submitForm(event) {
     event.preventDefault();// prevent default behavior
 
     message.innerHTML = "";
@@ -25,10 +25,9 @@ function formSubmit(event) {
     }
 
      doLogin(valueUsername, valueEmail, valuePassword);
+ }
 
-}
-
-async function doLogin(username, email, password) {
+ async function doLogin(username, email, password) {
 
         const adminUrl = url + "auth/local"; 
 
@@ -44,9 +43,8 @@ async function doLogin(username, email, password) {
 
         try {
             const response = await fetch(adminUrl, options);
-            const json = response.json();
-            console.log(json);
-
+            const json = await response.json();
+           
             if(json.user) {
                 displayMessage("success", "Successfully logged in", ".message-container");
             tokenSave(json.jwt); //saveToken
@@ -56,10 +54,11 @@ async function doLogin(username, email, password) {
         }
 
        if (json.error) {
-            //displayMessage("warning", "Invalid login detail", ".message.container");
+            displayMessage("warning", "Add a valid value", ".message-container");
         }
 
-     } catch(error) {
+        console.log(json);
+     } catch (error) {
             console.log(error);
     }
 }

@@ -31,3 +31,5 @@ const cartTotal = parseInt(details.price)
 + parseInt(details.price);
 console.log(cartTotal);
 //MANGLER TOTAL PRICE
+
+
