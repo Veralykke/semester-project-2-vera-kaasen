@@ -367,6 +367,7 @@ input {
       -ms-flex-pack: center;
           justify-content: center;
   margin-left: 19px;
+  border-radius: 5px;
 }
 
 form {
@@ -426,6 +427,12 @@ label {
   .product-images {
     width: 250px;
   }
+  .message-container {
+    margin-left: 49px;
+  }
+  nav li a {
+    width: 355px;
+  }
 }
 
 @media only screen and (min-width: 414px) {
@@ -484,6 +491,26 @@ button {
   margin-top: 15px;
   font-size: 1.3em;
   border-radius: 4px;
+  /*.modal {
+    position: fixed;
+    display: none;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background-color: getColour(secondary);
+    background-color: getColour(black);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: getColour(white);
+    margin: 5% auto 15% auto;
+    border: epx solid getColour(brown);
+    width: 80%;
+}*/
 }
 
 button button:hover {
@@ -522,27 +549,6 @@ button .imageContainer {
 
 button .formContainer {
   padding: 16px;
-}
-
-button .modal {
-  position: fixed;
-  display: none;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  overflow: auto;
-  width: 100%;
-  height: 100%;
-  background-color: #b9aaab;
-  background-color: #191919;
-  padding-top: 60px;
-}
-
-button .modal-content {
-  background-color: #fcfcfc;
-  margin: 5% auto 15% auto;
-  border: epx solid #83654A;
-  width: 80%;
 }
 
 button .close {

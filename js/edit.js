@@ -3,6 +3,7 @@ import displayMessage from "./components/common/displayMessage.js";
 import { getExistingFavs } from "./components/common/storage.js";
 import makeMenu from "./components/common/menu.js";
 import { storeToken, userSave } from "./components/common/storage.js";
+import buttonDelete from "./components/common/deleteButton.js";
 
 makeMenu();
 
@@ -13,7 +14,6 @@ const id = params.get("id");
 if (!id) {
     document.location.href = "/";
 }
-
 const productDetailUrl = url + "products/" + id;
 
 const form = document.querySelector("form");
@@ -33,6 +33,8 @@ const loading = document.querySelector(".loading");
         price.value = details.price;
         description.value = details.description;
         idInput.value = details.id;
+
+        buttonDelete(details.id);
 
         console.log(details);
     } catch (error) {

@@ -131,8 +131,8 @@ input {
     width: 271px;
     justify-content: center;
     margin-left: 19px;
+    border-radius: 5px;
 }
-
 .admin-form {
     //display: none;
 }
@@ -192,8 +192,14 @@ label {
      .product-images {
          width: 250px;
      }
-     
+     .message-container {
+        margin-left: 49px;   
+       }
+       nav li a {
+        width: 355px;
+    }
  }
+
  @media only screen and (min-width : 414px) {
     .cover-image {
         height: 275px;
