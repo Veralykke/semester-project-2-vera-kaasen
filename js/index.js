@@ -1,7 +1,9 @@
+
 import {url} from "./components/api.js";
 import displayMessage from "./components/common/displayMessage.js";
 import {hamburgerMenu} from "./hamburger.js";
 import makeMenu from "./components/common/menu.js";
+//import { myLoader } from"./components/common/loader.js";
 /*import validateForm from "./components/common/doLogin.js";*/
 
 //TESTE

@@ -1,4 +1,5 @@
 /*SETT SAMMEN*/
+
 .cover-image{
     height: 213px;
 }
@@ -55,6 +56,9 @@
     margin-left: 29px;
     box-shadow: 9px 9px 22px -9px #b9aa;
 }
+.admin-btn {
+    width:87%;
+}
 .container {
     margin: 0 auto;
     max-width: 1100px;
@@ -76,23 +80,30 @@
     border-radius: 6px;
     margin-left: 58px;
 }
-.loader {
+
+#loader {
     border-radius: 50%;
     width: 120px;
-    border: 16px solid getColour(brown);
-    border-top:  16px solid brown;
+    border: 16px solid getColour(primary);
+    border-top:  16px solid getColour(brown);
     height: 120px;
     animation: spin 2s linear infinite;
+    -webkit-animation: spin 2s linear infinite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -75px;
+    z-index: 1;
 }
 
+@keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg);}
+}
 
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg);}
 }
 
 /*FOOTER*/
@@ -125,7 +136,6 @@ input {
 }
 
 .admin-submit-btn {
-
     margin-top: 27px;
     width: 87%;
     margin-left: 18px;
@@ -139,11 +149,9 @@ input {
 }
 
 form {
-    background: getColour(white);
     padding: 4px;
     border-radius: 1px;
 }
-
 label {
     margin-top: 1rem;
     display: block;
@@ -151,6 +159,7 @@ label {
     font-size: 1em;
     font-family: $font-details;
 }
+
  .log-out {
      width: 45%;
      height: 35px;
@@ -168,6 +177,7 @@ label {
     padding: 0pt;
     
 }
+
 .form-error {
     display: none;
     margin-top: 4px;
