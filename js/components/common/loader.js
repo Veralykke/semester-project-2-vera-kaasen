@@ -1,9 +1,11 @@
-var myLoader;
+/*var myLoader;
 
-export function myLoaderFunction() {
+ function myFunction() {
     myLoader = setTimeout(showPage, 3000);
 }
 
 function showPage() {
-    document.getElementById("loader").style.display = "none";
-}
+   
+}*/
+
+/*$('#myLoader').addClass("hide-loader");*/

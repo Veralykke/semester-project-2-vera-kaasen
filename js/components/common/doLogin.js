@@ -3,7 +3,7 @@ import displayMessage from "../common/displayMessage.js";
 import { url } from "../api.js";
 import { storeToken, userSave } from "./storage.js";
 
-const form = document.querySelector("#login-form");
+const form = document.querySelector("form");
 const username = document.querySelector("#username");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
@@ -27,7 +27,7 @@ function submitForm(event) {
      doLogin(valueUsername, valueEmail, valuePassword);
  }
 
- async function doLogin(username, email, password) {
+async function doLogin(username, email, password) {
 
         const adminUrl = url + "auth/local"; 
 
