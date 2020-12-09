@@ -21,7 +21,7 @@ function submitForm(event) {
     const valuePassword = password.value.trim();
   
     if(valueUsername.length === 0 || valueEmail.length === 0 || valuePassword.length === 0) {
-       return displayMessage("warning", "Add a valid value", ".message-container");
+       return displayMessage("error", "Add a valid value", ".message-container");
     }
 
      doLogin(valueUsername, valueEmail, valuePassword);
