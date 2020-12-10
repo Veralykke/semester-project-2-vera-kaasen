@@ -1,8 +1,7 @@
 import { url } from "./components/api.js";
 import displayMessage from "./components/common/displayMessage.js";
-import { getExistingFavs } from "./components/common/storage.js";
+import { getToken } from "./components/common/storage.js";
 import makeMenu from "./components/common/menu.js";
-import { storeToken, userSave } from "./components/common/storage.js";
 import buttonDelete from "./components/common/deleteButton.js";
 
 makeMenu();
@@ -65,9 +64,9 @@ function submitForm(event) {
 
 }
 
-async function updateProduc(title, price, description, id) {
+async function updateProduct(title, price, description, id) {
 
-    const url = url +"products/" + id;
+    const editUrl = url +"products/" + id;
     const data = JSON.stringify({ title: title, price: price, description: description });
 
     const token = getToken();
@@ -77,7 +76,7 @@ async function updateProduc(title, price, description, id) {
         body: data,
         headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`
+            Authorization: `Bearer ${token}`,
         },
     };
 
