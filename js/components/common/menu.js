@@ -12,7 +12,8 @@ const username = getUserName();
 let authLink =  `<a href="login.html" class="${pathname === "login.html" ? "active" : ""}">Login</a>`
 
 if (username) {
-    authLink = `<span>Hello ${username}</span>`;           
+    authLink = `<a href="add.html" class="${pathname === "add.html" ? "active" : ""}">Add product</a>
+                <span>Hello ${username}</span> `;           
 }
 
 console.log(username);
