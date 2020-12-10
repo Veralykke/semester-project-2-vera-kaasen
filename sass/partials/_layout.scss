@@ -172,26 +172,7 @@
     text-align: center;
 } TESTE LOADER TO*/ 
 
-/*FOOTER*/
-footer {
-        height: 187px;
-        margin-top: 144px;
-        width: 100%;
-        background-color:getColour(secondary);
-        font-family: $font-primary;
-        font-size: 1.2em;
-        text-align: center;
-        left:0;
 
-.text-footer {
-        font-size: 0.8em;
-        color: white;
-        font-weight: 600;
-        margin-top: 45px;
-        }
-    }    
- /*FOOTER*/   
-   
 input {
     margin-top: 8px;
     width: 80%;
@@ -240,9 +221,15 @@ label {
     margin-left: 16px;
     font-size: 16px;
     padding: 0pt;
-    
 }
-
+.active {
+    color: green;
+}
+a, span {
+    font-size: 1em;
+    font-family: $font-primary;
+    font-weight: bold;
+}
 .form-error {
     display: none;
     margin-top: 4px;
@@ -266,6 +253,27 @@ label {
     font-size:1em;
     border-radius: 6px;
 }
+/*FOOTER*/
+footer {
+    height: 187px;
+    margin-top: 144px;
+    width: 100%;
+    background-color:getColour(secondary);
+    font-family: $font-primary;
+    font-size: 1.2em;
+    text-align: center;
+    left:0;
+
+.text-footer {
+    font-size: 0.8em;
+    color: white;
+    font-weight: 600;
+    margin-top: 45px;
+    }
+}    
+/*FOOTER*/   
+
+
 #logoutBtn {
 width: auto;
 }

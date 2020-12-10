@@ -2,7 +2,7 @@
 import {url} from "./components/api.js";
 import displayMessage from "./components/common/displayMessage.js";
 import {hamburgerMenu} from "./hamburger.js";
-import makeMenu from "./components/common/menu.js";
+import makeMenu from "././components/common/menu.js";
 /*import validateForm from "./components/common/doLogin.js";*/
 
 //TESTE
@@ -16,7 +16,7 @@ messageContainer.innerHTML = message;*/
 /* Get hero-banner image */
 const heroBannerUrl = url + "home";
 
-makeMenu(); //??
+makeMenu(); 
 
 (async function() {
     

@@ -30,7 +30,7 @@ export function saveUser(user) {
 export function getUserName() {
     const user = getFromStorage(userKey);
 
-    if(user) {
+    if (user) {
         return user.username;
     }
 

@@ -1,11 +1,12 @@
 import {hamburgerMenu} from "./hamburger.js";
 import {url} from "./components/api.js";
 import { searchProducts } from "./components/common/searchProducts.js";
-
+import makeMenu from "././components/common/menu.js";
 /*import { displayMessage } from "./components/common/displayMessage.js";*/
 
 /* NY API VERSjON */
 /*Adding HTML(json) function here*/
+makeMenu(); 
 
 const renderProductsUrl = url + "products";
 

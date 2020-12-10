@@ -2,12 +2,15 @@ import { hamburgerMenu } from "../../hamburger.js";
 import displayMessage from "../common/displayMessage.js";
 import { url } from "../api.js";
 import { saveToken, saveUser } from "./storage.js";
+import makeMenu from "../../components/common/menu.js";
 
 const form = document.querySelector("form");
 const username = document.querySelector("#username");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const message = document.querySelector(".message-container");
+
+makeMenu();
 
 form.addEventListener("submit", submitForm);
 

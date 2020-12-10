@@ -1,6 +1,9 @@
 import { url } from "./components/api.js";
 import displayMessage from "./components/common/displayMessage.js";
 import { getExistingFavs } from "./components/common/storage.js";
+import makeMenu from "././components/common/menu.js";
+
+makeMenu();
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
