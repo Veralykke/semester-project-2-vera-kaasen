@@ -22,23 +22,18 @@ if (favourites.length === 0) {
                 <a class="productView" href="detail.html?id=${details.id}">View</a>
             </div>`;
             
-//MANGLER TOTAL PRICE
 
+//TESTE TOTAL PRICE
 const cartTotal = parseInt(details.price)
 + parseInt(details.price);
 console.log(cartTotal);
 
     });
 }
- containerTotal.innerHTMl += `<div class ="cart-Container">Total: ${cartTotal}, </div>`;
+ containerTotal.innerHTMl += `<div class ="cart-total">Total: ${cartTotal}, </div>`;
  console.log(cartTotal);
+ //TESTE TOTAL PRICE
 
 
-
-//MANGLER TOTAL PRICE
-const cartTotal = parseInt(details.price)
-+ parseInt(details.price);
-console.log(cartTotal);
-//MANGLER TOTAL PRICE
 
 

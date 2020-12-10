@@ -97,7 +97,7 @@ nav {
 nav .hamburger {
   position: absolute;
   right: 24px;
-  top: 20px;
+  top: 46px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -194,7 +194,7 @@ nav li a.active {
   }
   nav .hamburger {
     right: 34px;
-    top: 34px;
+    top: 55px;
   }
   nav li a {
     width: 1668px;
