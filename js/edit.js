@@ -39,8 +39,7 @@ const loading = document.querySelector(".loading");
         console.log(details);
     } catch (error) {
         console.log(error);
-    }
-    finally {
+    } finally {
         loading.style.display = "none";
         form.style.display = "block";
     }
@@ -48,12 +47,12 @@ const loading = document.querySelector(".loading");
 
 form.addEventListener("submit", submitForm);
 
-function formSubmit(event) {
+function submitForm(event) {
     event.preventDefault();
 
     message.innerHTML = "";
 
-    const titleValue = title.nodeValue.trim();
+    const titleValue = title.Value.trim();
     const priceValue = parseFloat(price.value);
     const descriptionValue = description.value.trim();
     const valueId = idInput.value;
@@ -62,11 +61,11 @@ function formSubmit(event) {
          return displayMessage("warning", "Please add proper values", "message-container");
     }
 
-    productUpdate(titleValue, priceValue, descriptionValue, valueId);
+    updateProduct(titleValue, priceValue, descriptionValue, valueId);
 
 }
 
-async function productUpdate(title, price, description, id) {
+async function updateProduc(title, price, description, id) {
 
     const url = url +"products/" + id;
     const data = JSON.stringify({ title: title, price: price, description: description });

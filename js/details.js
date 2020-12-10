@@ -17,14 +17,14 @@ const productDetailUrl = url + "products/" + id;
 const favourites = getExistingFavs();
 favourites.forEach((details) => {
     
-    let cssClass = "prodB";//SLETTE
+    let cssClass = "prodB";
 //does the product exist in the favprod array
     const doesObjectExist = favourites.find(function (fav) {
         return parseInt(fav.id) === details.id;
     });
 
     if (doesObjectExist) {
-        cssClass ="pro"; //SLETTE
+        cssClass ="pro"; 
     }
 });
 
