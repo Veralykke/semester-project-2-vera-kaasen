@@ -9,7 +9,7 @@ const container = document.querySelector(".menu-container");
 const username = getUserName();
 
 
-let authLink =  `<a href="login.html" class="${pathname === "login.html" ? "active" : ""}">Login</a>`
+let authLink =  `<a href="login.html" class="${pathname === "login.html" ? "active" : ""}">Login</a>`;
 
 if (username) {
     authLink = `<a href="add.html" class="${pathname === "add.html" ? "active" : ""}">Add product</a>
@@ -19,7 +19,7 @@ if (username) {
 console.log(username);
 
 container.innerHTML = `<div class="myMenu">
-                            <a href="/" class="${pathname === "/" ? "active" : ""}">Home</a>
+                            <a href="/" class="${pathname === "/" || pathname === "/index.html" ? "active" : ""}">Home</a>
                             ${authLink}
                         </div>`;
 

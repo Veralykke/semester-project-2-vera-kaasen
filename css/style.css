@@ -451,6 +451,9 @@ label {
 
 .active {
   color: green;
+  font-size: 1em;
+  font-family: "open sans", sans-serif;
+  font-weight: bold;
 }
 
 a, span {
