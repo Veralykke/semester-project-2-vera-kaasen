@@ -478,6 +478,14 @@ a, span {
   border-radius: 6px;
 }
 
+.message.warning {
+  color: #fcfcfc;
+  border-color: orange;
+  background-color: orange;
+  font-size: 1em;
+  border-radius: 6px;
+}
+
 .message.success {
   color: #fcfcfc;
   border-color: green;

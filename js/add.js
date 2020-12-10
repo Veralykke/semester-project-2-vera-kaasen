@@ -5,13 +5,13 @@ import { url } from "./components/api.js";
 
 makeMenu();
 
-const form = document.querySelector("admin-form");
+const form = document.querySelector("#admin-form");
 const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const message = document.querySelector(".message-container");
 
-form.addEventListener(".submit", submitForm);
+form.addEventListener("submit", submitForm);
 
 function submitForm(event) {
     event.preventDefault();
@@ -25,7 +25,7 @@ function submitForm(event) {
     console.log("priceValue", priceValue);
 
     if(titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0) {
-         return displayMessage("error", "Please add proper values", "message-container");
+         return displayMessage("warning", "Please add proper values", "message-container");
     }
 
     addProduct(titleValue, priceValue, descriptionValue);
