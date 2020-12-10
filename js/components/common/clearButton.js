@@ -6,7 +6,7 @@ export default function clearbtn() {
         //clear the storage
         localStorage.clear();
         //adding an emty html
-        const results = document.querySelector(".product-container");
+        const results = document.querySelector(".cart-container");
 
         results.innerHTML = "";
     }

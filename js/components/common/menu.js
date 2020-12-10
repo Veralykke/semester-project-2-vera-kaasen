@@ -1,4 +1,4 @@
-import { getUserName } from "./storage.js";
+import { getUserName } from "././storage.js";
 import logoutBtn from './logoutButton.js';
 
 export default function makeMenu() {
@@ -12,7 +12,7 @@ let authLink = `<a href="login.html" class="${pathname === "/login.html" ? "acti
 
 if (username) {
     authLink = `<a href="admin.html" class="${pathname === "/admin.html" ? "active" : ""}">Add product</a>
-                <button id="logout">Logout ${username}</button>`;
+              `;
 }
 
 console.log(username);

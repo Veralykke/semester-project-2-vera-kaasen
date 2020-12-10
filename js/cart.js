@@ -2,7 +2,6 @@ import {hamburgerMenu} from "./hamburger.js";
 import clearbtn from "./components/common/clearButton.js";
 import { getExistingFavs } from "./components/common/storage.js";
 
-
 const favourites = getExistingFavs();
 console.log(favourites); // sjekke hva vi får fra funksjonen
 
@@ -23,6 +22,12 @@ if (favourites.length === 0) {
                 <a class="productView" href="detail.html?id=${details.id}">View</a>
             </div>`;
             
+//MANGLER TOTAL PRICE
+const cartTotal = parseInt(details.price)
++ parseInt(details.price);
+console.log(cartTotal);
+//MANGLER TOTAL PRICE
+
     });
 }
 

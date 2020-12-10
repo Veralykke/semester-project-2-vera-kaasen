@@ -12,23 +12,23 @@ export function getExistingFavs() {
 //ADD TO CART
 
 //Log in and save password
-const keyToken ="token";
-const keyUser = "user";
+const tokenKey="token";
+const userKey = "user";
 
-export function storeToken(token) { //saveToken
-saveStorage(keyToken, token); //saveToStorage
+export function saveToken(token) { //saveToken
+saveToStorage(tokenKey, token); //saveToStorage
 }
 
 export function getToken() {
-   return getFromStorage(keyToken);
+   return getFromStorage(tokenKey);
 }
 
-export function userSave(user) {
-    saveStorage(keyUser, user);
+export function saveUser(user) {
+    saveToStorage(userKey, user);
 }
 
 export function getUserName() {
-    const user = getFromStorage(keyUser);
+    const user = getFromStorage(userKey);
 
     if(user) {
         return user.username;
@@ -41,7 +41,7 @@ export function clearStorage() {
     localStorage.clear();
 }
 
-function saveStorage(key, value) {
+function saveToStorage(key, value) {
     localStorage.setItem(key, JSON.stringify(value));
 }
 

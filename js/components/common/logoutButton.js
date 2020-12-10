@@ -9,7 +9,7 @@ export default function logoutBtn() {
 
         if(doLogout) {
             clearStorage();
-            location.href = "/";
+            location.href = "login.html";
         }
     };
   }

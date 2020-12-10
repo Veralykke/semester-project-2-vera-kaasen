@@ -1,8 +1,8 @@
-import clearbtn from "./components/common/clearButton.js";
+//import clearbtn from "./components/common/clearButton.js";
 //import { doLogin } from "./components/common/storage.js";
 
 //TESTE SLETTE??
-const formProduct = document.querySelector("form");
+const formProduct = document.querySelector("admin-form");
 
 formProduct.addEventListener("submit", e => {
 e.preventDefault();

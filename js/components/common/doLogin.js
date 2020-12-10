@@ -1,7 +1,7 @@
 import { hamburgerMenu } from "../../hamburger.js";
 import displayMessage from "../common/displayMessage.js";
 import { url } from "../api.js";
-import { storeToken, userSave } from "./storage.js";
+import { saveToken, saveUser } from "./storage.js";
 
 const form = document.querySelector("form");
 const username = document.querySelector("#username");
@@ -47,14 +47,14 @@ async function doLogin(username, email, password) {
            
             if(json.user) {
                 displayMessage("success", "Successfully logged in", ".message-container");
-            tokenSave(json.jwt); //saveToken
-            userSave(json.user);
+            saveToken(json.jwt); //saveToken
+            saveUser(json.user);
 
             location.href = "admin.html";
         }
 
        if (json.error) {
-            displayMessage("warning", "Add a valid value", ".message-container");
+            displayMessage("error", "Add a valid value", ".message-container");
         }
 
         console.log(json);
