@@ -44,7 +44,7 @@ async function addProduct(title, price, description) {
         body: data,
         headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`
+            Authorization: `Bearer ${token}`,
         },
     };
 

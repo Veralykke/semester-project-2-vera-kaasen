@@ -5,7 +5,6 @@ export default function displayMessage(messageType, message, targetElement) {
     element.innerHTML = `<div class="message ${messageType}">${message}</div>`;
 }
 
-
 //WARNING ETC MESSAGES
 
 function createMessage(type = "success", message ="No message") {
