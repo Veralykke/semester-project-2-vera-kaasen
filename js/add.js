@@ -9,6 +9,8 @@ const form = document.querySelector("#admin-form");
 const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
+const image_url = document.querySelector("#image_url");
+const featured = document.querySelector("#featured");
 const message = document.querySelector(".message-container");
 
 form.addEventListener("submit", submitForm);
@@ -21,21 +23,22 @@ function submitForm(event) {
     const titleValue = title.value.trim();
     const priceValue = parseFloat(price.value);
     const descriptionValue = description.value.trim();
-
+    const imageValue = image_url.value.trim();
+    const featuredValue = featured.checked;
     console.log("priceValue", priceValue);
 
     if(titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0) {
          return displayMessage("warning", "Please add proper values", "message-container");
     }
 
-    addProduct(titleValue, priceValue, descriptionValue);
+    addProduct(titleValue, priceValue, descriptionValue, imageValue, featuredValue);
 }
 
-async function addProduct(title, price, description) {
+async function addProduct(title, price, description, image_url, featured) {
 
     const addUrl = url + "products";
 
-    const data = JSON.stringify({ title: title, price: price, description: description });
+    const data = JSON.stringify({ title: title, price: price, description: description, image_url: image_url, featured: featured });
 
     const token = getToken();
 

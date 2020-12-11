@@ -59,7 +59,7 @@ makeMenu();
             <a class="product" href="products.html?id=${product.id}">
                 <h4>${product.title}</h4>
                 <p>Price: ${product.price}</p>
-                <img class="product-images" src="http://localhost:1337${product.image.url}" alt="product-images">
+                <img class="product-images" src="${product.image_url}" alt="product-images">
                 <button onclick href= product.html>More</button>
             </a>`;
         }

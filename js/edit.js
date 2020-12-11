@@ -21,7 +21,7 @@ const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const featured = document.querySelector("#featured")
 const idInput = document.querySelector("#id");
-const image = document.querySelector("#image");
+const image_url = document.querySelector("#image");
 const message = document.querySelector(".message-container");
 const loading = document.querySelector(".loading");
 
@@ -35,7 +35,7 @@ const loading = document.querySelector(".loading");
         description.value = details.description;
         featured.value = details.featured;
         idInput.value = details.id;
-        image.value = details.image;
+        image.value = details.image_url;
         //buttonDelete(details.id);
 
         console.log(details);
@@ -46,6 +46,8 @@ const loading = document.querySelector(".loading");
         form.style.display = "block";
     }
 })();
+
+
 
 form.addEventListener("submit", submitForm);
 
@@ -59,7 +61,7 @@ function submitForm(event) {
     const descriptionValue = description.value.trim();
     const idValue = idInput.value;
     const featuredValue = featured.checked;
-    const imageValue = image.value;
+    const imageValue = image_url.value.trim();
 
     //console.log(details);
 
@@ -71,10 +73,10 @@ function submitForm(event) {
 
 }
 
-async function editProduct(title, price, description, id, featured, image) {
+async function editProduct(title, price, description, id, featured, image_url) {
 
     const editUrl = url +"products/" + id;
-    const data = JSON.stringify({ title: title, price: price, description: description, featured: featured, image: image});
+    const data = JSON.stringify({ title: title, price: price, description: description, featured: featured, image_url: image_url});
 
     const token = getToken();
 

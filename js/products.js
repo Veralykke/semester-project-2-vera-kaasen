@@ -34,11 +34,11 @@ function HTML(json) {
         <div id="product-${product.id}" class="product"
             data-title = "${product.title}" 
             data-price = "${product.price}"
-            data-image = "http://localhost:1337${product.image.url}">
+            data-image = "${product.image_url}">
 
             <h4>${product.title}</h4>
             <p>Price: ${product.price}$</p>
-            <img class="product-images" src="http://localhost:1337${product.image.url}" alt="product-images">
+            <img class="product-images" src="${product.image_url}" alt="product-images">
             <a href="detail.html?id=${product.id}"> <button class="button-more" data-id="${product.id}">More</button></a>
         </div>`;
     });

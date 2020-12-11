@@ -15,6 +15,7 @@
 </head>
 
 <body>
+
     <header>
         <div class="menu-container"></div>
         <a href="index.html">
@@ -37,42 +38,47 @@
     </header>
 
     <main>
-
-        <!--<button class="log-out">Log out</button>-->
-        <!--ADDING-->
         <h1>Add products</h1>
 
         <div class="loader" id="myLoader"></div>
         <div class="container">
             <input class="search-box" placeholder="Search.." />
+            <form id="admin-form" action=".upload" method="post">
+                <div class="message-container"></div>
+                <div>
+                    <label for="title">Title</label>
+                    <input id="title">
+                </div>
+                <div>
+                    <label for="price">Price</label>
+                    <input id="price">
+                </div>
+                <div>
+                    <label for="description">Description</label>
+                    <textarea id="description"></textarea>
+                </div>
+                <input type="checkbox" id="featured">
+                <input type="text" id="image_url">
+
+                <input id="id" type="hidden" />
+
+                <button class="addBtn">Add</button>
+
+                <hr>
+
+                <div class="container-delete">
+                    <!--<button id="logout">Logout ${username}</button>-->
+                </div>
+            </form>
             <div class="product-container">Loading...</div>
         </div>
 
-        <form id="admin-form" action=".upload" method="post">
-            <div class="message-container"></div>
-            <div>
-                <label for="title">Title</label>
-                <input id="title">
-            </div>
-            <div>
-                <label for="price">Price</label>
-                <input id="price">
-            </div>
-            <div>
-                <label for="description">Description</label>
-                <textarea id="description"></textarea>
-            </div>
 
-            <input id="id" type="hidden" />
+        <!--<button class="log-out">Log out</button>-->
+        <!--ADDING-->
 
-            <button class="addBtn">Add</button>
 
-            <hr>
 
-            <div class="container-delete">
-                <!--<button id="logout">Logout ${username}</button>-->
-            </div>
-        </form>
         </div>
         <div class="loader" id="myLoader"></div>
         <div class="container">
@@ -80,15 +86,6 @@
         </div>
 
         <div class="menu-container"></div>
-
-
-        <div class="container">
-            <div class="admin-container"></div>
-            <div class="loader" id="myLoader"></div>
-            <form>
-                <input type="file" name="files" />
-                <input type="submit" name="Submit" />
-            </form>
 
 
     </main>

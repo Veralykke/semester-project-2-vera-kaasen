@@ -44,14 +44,14 @@ favourites.forEach((details) => {
         <div id="product-${details.id}" class="product">
             <h4>${details.title}</h4>
             <p>Price: ${details.price}</p>
-            <img class="product-images" src="http://localhost:1337${details.image.url}" alt="product-images">
+            <img class="product-images" src="${details.image_url}" alt="product-images">
             <p>Description: ${details.description}</p>
             <button class = "${cssClass} add-to-cart" 
                 data-id="${details.id}"
                 data-title = "${details.title}" 
                 data-price = "${details.price}"
                 data-description = "${details.description}"
-                data-image = "http://localhost:1337${details.image.url}">
+                data-image = "${details.image_url}">
             Add to cart</button>
         </div>`;
 
