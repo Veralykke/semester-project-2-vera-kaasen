@@ -39,20 +39,13 @@ function HTML(json) {
             <h4>${product.title}</h4>
             <p>Price: ${product.price}$</p>
             <img class="product-images" src="http://localhost:1337${product.image.url}" alt="product-images">
-            <button class="button-more" data-id="${product.id}">More</button>
+            <a href="detail.html?id=${product.id}"> <button class="button-more" data-id="${product.id}">More</button></a>
         </div>`;
     });
 
-    //select all buttons and linking them by the "click" event to the "detailpage", with help from the id. 
-    const products = document.querySelectorAll(".product button"); 
-    products.forEach(function(product){
-        product.addEventListener("click", viewDetails);
-    });
 }
 
-function viewDetails(e){ //(event)
-    window.location.href = `detail.html?id=${e.target.dataset.id}`;
-}
+
 
 
 

@@ -2,12 +2,11 @@
 import {hamburgerMenu} from "./hamburger.js";
 import {url} from "./components/api.js";
 import { searchProducts } from "./components/common/searchProducts.js";
-import makeMenu from "././components/common/menu.js";
+//import makeMenu from "././components/common/menu.js";
 /*import { displayMessage } from "./components/common/displayMessage.js";*/
 
-/* NY API VERSjON */
 /*Adding HTML(json) function here*/
-makeMenu(); 
+//makeMenu(); 
 
 const renderProductsUrl = url + "products";
 
@@ -40,20 +39,11 @@ function HTML(json) {
             <h4>${product.title}</h4>
             <p>Price: ${product.price}$</p>
             <img class="product-images" src="http://localhost:1337${product.image.url}" alt="product-images">
-            <button class="button-more" data-id="${product.id}">Edit</button>
+            <a href="edit.html?id=${product.id}"><button class="button-more" data-id="${product.id}">Edit</button></a>
         </div>`;
     });}
 
-    //select all buttons and linking them by the "click" event to the "detailpage", with help from the id. 
-    const products = document.querySelectorAll(".product button"); 
-    products.forEach(function(product){
-        product.addEventListener("click", viewDetails);
-    });
-}
 
-function viewDetails(e){ //(event)
-    window.location.href = `edit.html?id=${e.target.dataset.id}`;
-} 
 
 
 

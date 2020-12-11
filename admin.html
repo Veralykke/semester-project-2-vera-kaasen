@@ -37,52 +37,58 @@
     </header>
 
     <main>
+
+        <button class="log-out">Log out</button>
+        <!--ADDING-->
+        <h1>Add products</h1>
+
+        <div class="loader" id="myLoader"></div>
+        <div class="container">
+            <input class="search-box" placeholder="Search.." />
+            <div class="product-container">Loading...</div>
+        </div>
+
+        <form id="admin-form" action=".upload" method="post">
+            <div class="message-container"></div>
+            <div>
+                <label for="title">Title</label>
+                <input id="title">
+            </div>
+            <div>
+                <label for="price">Price</label>
+                <input id="price">
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <textarea id="description"></textarea>
+            </div>
+
+            <input id="id" type="hidden" />
+
+            <button class="addBtn">Add</button>
+
+            <hr>
+
+            <div class="container-delete">
+                <!--<button id="logout">Logout ${username}</button>-->
+            </div>
+        </form>
+        </div>
         <div class="loader" id="myLoader"></div>
         <div class="container">
             <div class="product-container">Loading...</div>
         </div>
 
         <div class="menu-container"></div>
-        <button class="log-out">Log out</button>
+
 
         <div class="container">
             <div class="admin-container"></div>
             <div class="loader" id="myLoader"></div>
-
-            <!--ADDING-->
-            <h1>Add products</h1>
-
-            <form id="admin-form" action=".upload" method="post">
-                <div class="message-container"></div>
-                <div>
-                    <label for="title">Title</label>
-                    <input id="title">
-                </div>
-                <div>
-                    <label for="price">Price</label>
-                    <input id="price">
-                </div>
-                <div>
-                    <label for="description">Description</label>
-                    <textarea id="description"></textarea>
-                </div>
-
-                <input id="id" type="hidden" />
-
-                <button class="addBtn">Add</button>
-
-                <hr>
-
-                <div class="container-delete">
-                    <!--<button id="logout">Logout ${username}</button>-->
-                </div>
+            <form>
+                <input type="file" name="files" />
+                <input type="submit" name="Submit" />
             </form>
-        </div>
-
-        <form>
-            <input type="file" name="files" />
-            <input type="submit" name="Submit" />
-        </form>
 
 
     </main>

@@ -2,7 +2,7 @@ import { url } from "./components/api.js";
 import displayMessage from "./components/common/displayMessage.js";
 //import { getToken } from "./components/common/storage.js";
 import makeMenu from "./components/common/menu.js";
-import buttonDelete from "./components/common/deleteButton.js";
+//import buttonDelete from "./components/common/deleteButton.js";
 
 makeMenu();
 
@@ -27,14 +27,14 @@ const loading = document.querySelector(".loading");
 (async function () {
     try {
         const response = await fetch(EditUrl);
-        const details= await response.json();
+        const details = await response.json();
 
         title.value = details.title;
         price.value = details.price;
         description.value = details.description;
         idInput.value = details.id;
 
-        buttonDelete(details.id);
+        //buttonDelete(details.id);
 
         console.log(details);
     } catch (error) {

@@ -261,6 +261,10 @@ nav li a.active {
   margin-top: 19px;
 }
 
+#logout {
+  width: auto;
+}
+
 .product-images {
   -ms-flex-pack: distribute;
       justify-content: space-around;

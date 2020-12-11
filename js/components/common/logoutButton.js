@@ -1,7 +1,7 @@
 import { clearStorage } from "../../components/common/storage.js";
 
 export default function logoutBtn() {
-    const button = document.querySelector("#logoutBtn");
+    const button = document.querySelector("#logout");
 
     if(button) {
         button.onclick = function() {
@@ -9,7 +9,7 @@ export default function logoutBtn() {
 
         if(doLogout) {
             clearStorage();
-            location.href = "login.html";
+            location.href = "/";
         }
     };
   }
