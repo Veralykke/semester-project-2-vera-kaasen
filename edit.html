@@ -38,7 +38,7 @@
     </header>
     <!--EDITING-->
     <main>
-        <form>
+        <form enctype="multipart/form-data">
             <div class="message-container"></div>
 
             <div>
@@ -56,15 +56,14 @@
 
             <input id="id" type="hidden" />
             <input type="checkbox" id="featured" value="true"></input>
+            <input type="file" name="files" id="image" />
             <div>
                 <button class="addBtn" id="update">Update</button>
             </div>
+
+
         </form>
 
-        <form>
-            <input type="file" name="files" />
-            <input type="submit" name="Submit" />
-        </form>
         </div>
 
     </main>

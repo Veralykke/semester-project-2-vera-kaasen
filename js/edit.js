@@ -21,6 +21,7 @@ const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const featured = document.querySelector("#featured")
 const idInput = document.querySelector("#id");
+const image = document.querySelector("#image");
 const message = document.querySelector(".message-container");
 const loading = document.querySelector(".loading");
 
@@ -34,7 +35,7 @@ const loading = document.querySelector(".loading");
         description.value = details.description;
         featured.value = details.featured;
         idInput.value = details.id;
-
+        image.value = details.image;
         //buttonDelete(details.id);
 
         console.log(details);
@@ -58,6 +59,7 @@ function submitForm(event) {
     const descriptionValue = description.value.trim();
     const idValue = idInput.value;
     const featuredValue = featured.checked;
+    const imageValue = image.value;
 
     //console.log(details);
 
@@ -65,14 +67,14 @@ function submitForm(event) {
          return displayMessage("warning", "Please add proper values", "message-container");
     }
 
-    editProduct(titleValue, priceValue, descriptionValue, idValue, featuredValue);
+    editProduct(titleValue, priceValue, descriptionValue, idValue, featuredValue, imageValue);
 
 }
 
-async function editProduct(title, price, description, id, featured) {
+async function editProduct(title, price, description, id, featured, image) {
 
     const editUrl = url +"products/" + id;
-    const data = JSON.stringify({ title: title, price: price, description: description, featured: featured});
+    const data = JSON.stringify({ title: title, price: price, description: description, featured: featured, image: image});
 
     const token = getToken();
 
