@@ -16,7 +16,7 @@ if (username) {
                 <span>Hello ${username}</span> `;           
 }
 
-console.log(username);
+//console.log(username);
 
 container.innerHTML = `<div class="myMenu">
                             <a href="/" class="${pathname === "/" || pathname === "/index.html" ? "active" : ""}">Home</a>

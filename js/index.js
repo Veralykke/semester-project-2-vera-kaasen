@@ -56,7 +56,7 @@ makeMenu();
         /* If featured product, render it, else skip it */
         if(product.featured) {
             container.innerHTML += `
-            <a class="product" href="products.html?id=${product.id}">
+            <a class="product" href="admin.html?id=${product.id}">
                 <h4>${product.title}</h4>
                 <p>Price: ${product.price}</p>
                 <img class="product-images" src="http://localhost:1337${product.image.url}" alt="product-images">

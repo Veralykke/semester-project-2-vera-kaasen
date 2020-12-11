@@ -1,6 +1,6 @@
 import { url } from "./components/api.js";
 import displayMessage from "./components/common/displayMessage.js";
-import { getToken } from "./components/common/storage.js";
+//import { getToken } from "./components/common/storage.js";
 import makeMenu from "./components/common/menu.js";
 import buttonDelete from "./components/common/deleteButton.js";
 
@@ -13,20 +13,21 @@ const id = params.get("id");
 if (!id) {
     document.location.href = "/";
 }
-const productDetailUrl = url + "products/" + id;
+
+const EditUrl = url + "products/" + id;
 
 const form = document.querySelector("form");
-const title = document.querySelector("#name");
+const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
-const inputId = document.querySelector("id");
+const idInput = document.querySelector("#id");
 const message = document.querySelector(".message-container");
 const loading = document.querySelector(".loading");
 
 (async function () {
     try {
-        const response = await fetch(productDetailUrl);
-        const details = await response.json();
+        const response = await fetch(EditUrl);
+        const details= await response.json();
 
         title.value = details.title;
         price.value = details.price;
@@ -51,20 +52,22 @@ function submitForm(event) {
 
     message.innerHTML = "";
 
-    const titleValue = title.Value.trim();
+    const titleValue = title.value.trim();
     const priceValue = parseFloat(price.value);
     const descriptionValue = description.value.trim();
-    const valueId = idInput.value;
+    const idValue = idInput.value;
 
-    if(titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0) {
+    console.log(details);
+
+    if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0) {
          return displayMessage("warning", "Please add proper values", "message-container");
     }
 
-    updateProduct(titleValue, priceValue, descriptionValue, valueId);
+    editProduct(titleValue, priceValue, descriptionValue, idValue);
 
 }
 
-async function updateProduct(title, price, description, id) {
+async function editProduct(title, price, description, id) {
 
     const editUrl = url +"products/" + id;
     const data = JSON.stringify({ title: title, price: price, description: description });
@@ -81,9 +84,9 @@ async function updateProduct(title, price, description, id) {
     };
 
     try {
-        const response = await fetch(url, options);
+        const response = await fetch(editUrl, options);
         const json = await response.json();
-        console.log(json)
+        console.log(json);
 
         if(json.updated_at) {
             displayMessage("success", "product-created", ".message-container");

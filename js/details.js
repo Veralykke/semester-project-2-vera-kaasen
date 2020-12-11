@@ -1,7 +1,7 @@
-import { url } from "./components/api.js";
 import displayMessage from "./components/common/displayMessage.js";
-import { getExistingFavs } from "./components/common/storage.js";
-import makeMenu from "././components/common/menu.js";
+import makeMenu from "./components/common/menu.js";
+import { getExistingFavs } from "././components/common/storage.js";
+import { url } from "./components/api.js";
 
 makeMenu();
 
@@ -12,6 +12,7 @@ const id = params.get("id");
 if (!id) {
     document.location.href = "/";
 }
+
 const productDetailUrl = url + "products/" + id;
 
 const favourites = getExistingFavs();

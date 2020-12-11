@@ -470,6 +470,10 @@ a, span {
   font-size: 1em;
 }
 
+.edit-form {
+  display: none;
+}
+
 .message.error {
   color: #fcfcfc;
   border-color: red;
