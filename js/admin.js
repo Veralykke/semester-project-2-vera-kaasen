@@ -1,12 +1,12 @@
 
 import {hamburgerMenu} from "./hamburger.js";
 import {url} from "./components/api.js";
-import { searchProducts } from "./components/common/searchProducts.js";
-//import makeMenu from "././components/common/menu.js";
+import { searchProducts } from "./components/common/searchProducts.js"
+import makeMenu from "./components/common/menu.js";
 /*import { displayMessage } from "./components/common/displayMessage.js";*/
 
 /*Adding HTML(json) function here*/
-//makeMenu(); 
+makeMenu(); 
 
 const renderProductsUrl = url + "products";
 
@@ -40,6 +40,7 @@ function HTML(json) {
             <p>Price: ${product.price}$</p>
             <img class="product-images" src="${product.image_url}" alt="product-images">
             <a href="edit.html?id=${product.id}"><button class="button-more" data-id="${product.id}">Edit</button></a>
+            <a href="edit.html?id=${product.id}"><button onclick class="button-more" data-id="${product.id}">Delete</button></a>
         </div>`;
     });}
 

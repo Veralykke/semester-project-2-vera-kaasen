@@ -1,5 +1,5 @@
-import { url } from "./components/api.js";
-import { getToken } from "./components/common/storage.js";
+import { url } from "../../components/api.js";
+import { getToken } from "../../components/common/storage.js";
 
 export default function buttonDelete(id) {
 
@@ -7,7 +7,7 @@ export default function buttonDelete(id) {
 
     container.innerHTML = `<button type="button" class="delete">Delete</button>`;
 
-    const deleteButton = document.querySelector("button.delete");
+    const button = document.querySelector("button.delete");
 
     button.onclick = async function () {
         console.log(id);
@@ -16,7 +16,7 @@ export default function buttonDelete(id) {
         console.log(deleteDo);
 
         if(deleteDo) {
-            const url = url +"products/" + id;
+            const deleteUrl = url +"products/" + id;
 
             const token = getToken();
     
@@ -28,7 +28,7 @@ export default function buttonDelete(id) {
             };
     
             try {
-                const response = await fetch(url, options)
+                const response = await fetch(deleteUrl, options)
                 const json = await response.json();
 
                 location.href = "/";
