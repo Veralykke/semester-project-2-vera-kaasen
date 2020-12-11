@@ -80,7 +80,7 @@
     border-radius: 6px;
     margin-left: 58px;
 }
-/*TESTE LOADER 
+TESTE LOADER 
 .myLoader {
     position: fixed;
     z-index: 999999;
@@ -179,13 +179,19 @@ input {
     margin-left: 15px;
     border-radius: 6px;
 }
-
+#description {
+    margin-left: 15px;
+    width: 270px;
+}
 .admin-submit-btn {
     margin-top: 27px;
     width: 87%;
     margin-left: 18px;
 }
-
+.addBtn {
+    width: 270px;
+    margin-left: 16px;
+}
 .message-container {
     width: 271px;
     justify-content: center;

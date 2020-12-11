@@ -305,53 +305,75 @@ nav li a.active {
   margin-left: 58px;
 }
 
-/*TESTE LOADER 
+TESTE LOADER
 .myLoader {
-    position: fixed;
-    z-index: 999999;
-    width: 100%;
-    height: 100%;
-    background: getColour(white);
+  position: fixed;
+  z-index: 999999;
+  width: 100%;
+  height: 100%;
+  background: #fcfcfc;
 }
+
 .loader {
-    border: 0 solid transparent;
-    border-radius: 50%;
-    top: calc(50vh - 75px);
-    left: calc(50vW - 75px);
-    position: absolute;
-    height: 150px;
-    width: 150px;
+  border: 0 solid transparent;
+  border-radius: 50%;
+  top: calc(50vh - 75px);
+  left: calc(50vW - 75px);
+  position: absolute;
+  height: 150px;
+  width: 150px;
 }
+
 .loader:before, .loader:after {
-    border: lem solid getColour(white);
-    content: '';
-    animation: loader 2s linear infinite;
-    border-radius: 50%;
-    position: absolute;
-    height: inherit;
-    width: inherit;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    animation: loader 2s linear infinite;
+  border: lem solid #fcfcfc;
+  content: '';
+  -webkit-animation: loader 2s linear infinite;
+          animation: loader 2s linear infinite;
+  border-radius: 50%;
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: loader 2s linear infinite;
 }
 
 .loader:before {
-    animation-delay: .5s;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
 }
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    tranform: scale(1);
+    opacity: 0;
+  }
+}
+
 @keyframes loader {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        tranform:scale(1);
-        opacity: 0;
-    }
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    tranform: scale(1);
+    opacity: 0;
+  }
 }
+
 /*TESTE LOADER 
 
  TESTE LOADER TO
@@ -405,10 +427,20 @@ input {
   border-radius: 6px;
 }
 
+#description {
+  margin-left: 15px;
+  width: 270px;
+}
+
 .admin-submit-btn {
   margin-top: 27px;
   width: 87%;
   margin-left: 18px;
+}
+
+.addBtn {
+  width: 270px;
+  margin-left: 16px;
 }
 
 .message-container {

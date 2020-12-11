@@ -51,7 +51,7 @@ function HTML(json) {
 }
 
 function viewDetails(e){ //(event)
-    window.location.href = `details.html?id=${e.target.dataset.id}`;
+    window.location.href = `detail.html?id=${e.target.dataset.id}`;
 }
 
 

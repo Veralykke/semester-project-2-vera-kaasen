@@ -37,6 +37,11 @@
     </header>
 
     <main>
+        <div class="loader" id="myLoader"></div>
+        <div class="container">
+            <div class="product-container">Loading...</div>
+        </div>
+
         <div class="menu-container"></div>
         <button class="log-out">Log out</button>
 
@@ -59,12 +64,12 @@
                 </div>
                 <div>
                     <label for="description">Description</label>
-                    <input id="description">
+                    <textarea id="description"></textarea>
                 </div>
 
                 <input id="id" type="hidden" />
 
-                <button>Add</button>
+                <button class="addBtn">Add</button>
 
                 <hr>
 
@@ -79,41 +84,7 @@
             <input type="submit" name="Submit" />
         </form>
 
-        <!--EDITING-->
-        <div class="container">
-            <div class="admin-container"></div>
-            <div class="loading" id="myLoader"></div>
-            <h1>Edit products</h1>
-            <div class="loading">Loading...</div>
 
-            <form>
-                <div class="message-container"></div>
-
-                <div>
-                    <label for="title">Title</label>
-                    <input id="title">
-                </div>
-                <div>
-                    <label for="price">Price</label>
-                    <input id="price">
-                </div>
-                <div>
-                    <label for="description">Description</label>
-                    <textarea id="description"></textarea>
-                </div>
-
-                <input id="id" />
-
-                <div>
-                    <button id="update">Update</button>
-                </div>
-            </form>
-
-            <form>
-                <input type="file" name="files" />
-                <input type="submit" name="Submit" />
-            </form>
-        </div>
     </main>
     <footer>
         <span class="text-footer">Copyright 2020</span>
