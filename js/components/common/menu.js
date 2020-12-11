@@ -1,5 +1,5 @@
 import { getUserName } from "../../components/common/storage.js";
-import logoutBtn from '../common/deleteButton.js';
+import logoutBtn from '../common/logoutButton.js';
 
 export default function makeMenu() {
 const { pathname } = document.location;

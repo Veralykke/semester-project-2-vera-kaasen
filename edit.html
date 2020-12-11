@@ -15,42 +15,63 @@
     <title>Edit</title>
 </head>
 
-<!--EDITING-->
-<main>
-    <form>
-        <div class="message-container"></div>
+<body>
+    <header>
+        <div class="menu-container"></div>
+        <a href="index.html">
+            <img src="./img/logo-two.png" class="logo" alt="logo">
+        </a>
+        <nav class="menu">
+            <span class="hamburger">
+                <span class="bar one"></span>
+                <span class="bar two"></span>
+                <span class="bar tree"></span>
+            </span>
 
-        <div>
-            <label for="title">Title</label>
-            <input id="title">
+            <ul class="menu-links">
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="products.html">PRODUCTS</a></li>
+                <li><a href="cart.html">CART</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--EDITING-->
+    <main>
+        <form>
+            <div class="message-container"></div>
+
+            <div>
+                <label for="title">Title</label>
+                <input id="title">
+            </div>
+            <div>
+                <label for="price">Price</label>
+                <input id="price">
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <textarea id="description"></textarea>
+            </div>
+
+            <input id="id" type="hidden" />
+            <input type="checkbox" id="featured" value="true"></input>
+            <div>
+                <button class="addBtn" id="update">Update</button>
+            </div>
+        </form>
+
+        <form>
+            <input type="file" name="files" />
+            <input type="submit" name="Submit" />
+        </form>
         </div>
-        <div>
-            <label for="price">Price</label>
-            <input id="price">
-        </div>
-        <div>
-            <label for="description">Description</label>
-            <textarea id="description"></textarea>
-        </div>
 
-        <input id="id" />
-
-        <div>
-            <button class="addBtn" id="update">Update</button>
-        </div>
-    </form>
-
-    <form>
-        <input type="file" name="files" />
-        <input type="submit" name="Submit" />
-    </form>
-    </div>
-
-</main>
-<footer>
-    <span class="text-footer">Copyright 2020</span>
-    <a href="/">Terms & Conditions</a>
-</footer>
+    </main>
+    <footer>
+        <span class="text-footer">Copyright 2020</span>
+        <a href="/">Terms & Conditions</a>
+    </footer>
 </body>
 
 </html>

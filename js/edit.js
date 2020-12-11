@@ -1,8 +1,7 @@
 import { url } from "./components/api.js";
 import displayMessage from "./components/common/displayMessage.js";
-//import { getToken } from "./components/common/storage.js";
+import { getToken } from "./components/common/storage.js";
 import makeMenu from "./components/common/menu.js";
-//import buttonDelete from "./components/common/deleteButton.js";
 
 makeMenu();
 
@@ -20,6 +19,7 @@ const form = document.querySelector("form");
 const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
+const featured = document.querySelector("#featured")
 const idInput = document.querySelector("#id");
 const message = document.querySelector(".message-container");
 const loading = document.querySelector(".loading");
@@ -32,6 +32,7 @@ const loading = document.querySelector(".loading");
         title.value = details.title;
         price.value = details.price;
         description.value = details.description;
+        featured.value = details.featured;
         idInput.value = details.id;
 
         //buttonDelete(details.id);
@@ -56,21 +57,22 @@ function submitForm(event) {
     const priceValue = parseFloat(price.value);
     const descriptionValue = description.value.trim();
     const idValue = idInput.value;
+    const featuredValue = featured.checked;
 
-    console.log(details);
+    //console.log(details);
 
     if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0) {
          return displayMessage("warning", "Please add proper values", "message-container");
     }
 
-    editProduct(titleValue, priceValue, descriptionValue, idValue);
+    editProduct(titleValue, priceValue, descriptionValue, idValue, featuredValue);
 
 }
 
-async function editProduct(title, price, description, id) {
+async function editProduct(title, price, description, id, featured) {
 
     const editUrl = url +"products/" + id;
-    const data = JSON.stringify({ title: title, price: price, description: description });
+    const data = JSON.stringify({ title: title, price: price, description: description, featured: featured});
 
     const token = getToken();
 

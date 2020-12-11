@@ -6,6 +6,6 @@
 
 function showPage() {
    
-}*/
+}
 
-/*$('#myLoader').addClass("hide-loader");*/
+$('#myLoader').addClass("hide-loader");*/
