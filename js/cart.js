@@ -8,7 +8,7 @@ console.log(favourites); // sjekke hva vi får fra funksjonen
 clearbtn();
 
 const results = document.querySelector(".cart-container");
-
+var cartTotal = 0;
 if (favourites.length === 0) {
     results.innerHTML = " You have nothing in your cart yet";
 } else {
@@ -24,13 +24,13 @@ if (favourites.length === 0) {
             
 
 //TESTE TOTAL PRICE
-const cartTotal = parseInt(details.price)
-+ parseInt(details.price);
+cartTotal = cartTotal + parseInt(details.price);
 console.log(cartTotal);
 
     });
 }
- containerTotal.innerHTMl += `<div class ="cart-total">Total: ${cartTotal}, </div>`;
+document.getElementById("priceTotal").innerHTML = cartTotal + "$";
+ //containerTotal.innerHTMl += `<div class ="cart-total">Total: ${cartTotal}, </div>`;
  console.log(cartTotal);
  //TESTE TOTAL PRICE
 
