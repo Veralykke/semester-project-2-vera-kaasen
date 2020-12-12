@@ -9,7 +9,7 @@ makeMenu();
 const renderProductsUrl = url + "products";
 
 (async function() {
-    
+
     try {
         const response = await fetch(renderProductsUrl);
         const json = await response.json();
