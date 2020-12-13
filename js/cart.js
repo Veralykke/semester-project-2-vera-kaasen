@@ -23,7 +23,7 @@ if (favourites.length === 0) {
             </div>`;
             
 
-//TESTE TOTAL PRICE
+//TOTAL PRICE
 cartTotal = cartTotal + parseInt(details.price);
 console.log(cartTotal);
 
@@ -32,7 +32,7 @@ console.log(cartTotal);
 document.getElementById("priceTotal").innerHTML = cartTotal + "$";
  //containerTotal.innerHTMl += `<div class ="cart-total">Total: ${cartTotal}, </div>`;
  console.log(cartTotal);
- //TESTE TOTAL PRICE
+ //TOTAL PRICE
 
 
 

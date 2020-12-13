@@ -309,6 +309,10 @@ nav li a.active {
   margin-left: 17px;
 }
 
+.hide-loader {
+  display: none;
+}
+
 /*.myLoader {
     position: fixed;
     z-index: 999999;

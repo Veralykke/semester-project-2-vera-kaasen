@@ -1,7 +1,7 @@
 
 import {hamburgerMenu} from "./hamburger.js";
 import {url} from "./components/api.js";
-import { searchProducts } from "./components/common/searchProducts.js"
+import { searchFunction } from "./components/common/searchProducts.js"
 import makeMenu from "./components/common/menu.js";
 /*import { displayMessage } from "./components/common/displayMessage.js";*/
 
@@ -16,7 +16,7 @@ const renderProductsUrl = url + "products";
         const response = await fetch(renderProductsUrl);
         const json = await response.json();
         HTML(json);
-        searchProducts(json);
+        searchFunction(json);
     }
      catch (error) {
         console.log(error);
