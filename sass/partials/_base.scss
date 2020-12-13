@@ -61,8 +61,8 @@ p {
     padding: 1rem;
 }
 .cart-container {
-    font-size: 1.3em;
-    margin-left: 30px;
+    font-size: 1.em;
+    margin-left: 61px;
 }
 .footer-text {
     font-family: $font-primary;
@@ -76,9 +76,12 @@ p {
     .add-to-cart {
         margin-left: 217px;
     }
+    .cart-container {
+        font-size: 1.3em;
+        margin-left: 65px;
+    }
    
 }
-
 
 @media only screen and (min-width : 1366px) {
 

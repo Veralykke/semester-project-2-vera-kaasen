@@ -46,13 +46,14 @@ favourites.forEach((details) => {
             <p>Price: ${details.price}</p>
             <img class="product-images" src="${details.image_url}" alt="product-images">
             <p>Description: ${details.description}</p>
+            <a href="products.html">
             <button class = "${cssClass} add-to-cart" 
                 data-id="${details.id}"
                 data-title = "${details.title}" 
                 data-price = "${details.price}"
                 data-description = "${details.description}"
                 data-image = "${details.image_url}">
-            Add to cart</button>
+            Add to cart</button></a>
         </div>`;
 
         const favButton = document.querySelector(".add-to-cart");

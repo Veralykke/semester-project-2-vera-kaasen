@@ -3,7 +3,12 @@ import {hamburgerMenu} from "./hamburger.js";
 import {url} from "./components/api.js";
 import { searchFunction } from "./components/common/searchProducts.js"
 import makeMenu from "./components/common/menu.js";
+import { getUserName } from "./components/common/storage.js";
 /*import { displayMessage } from "./components/common/displayMessage.js";*/
+const username = getUserName();
+if (username != "admin") {
+    window.location = "index.html";
+}
 
 /*Adding HTML(json) function here*/
 makeMenu(); 

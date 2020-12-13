@@ -309,8 +309,6 @@ footer {
     }
 }    
 /*FOOTER*/   
-
-
 #logoutBtn {
 width: auto;
 }
@@ -427,6 +425,10 @@ width: auto;
     }
     .avatar-img {
         margin-left: 400px;
+    }
+    #description, .addBtn {
+        margin-left: 175px;
+        width: 620px;
     }
    
 }

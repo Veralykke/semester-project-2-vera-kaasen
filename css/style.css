@@ -74,6 +74,10 @@ p {
   .add-to-cart {
     margin-left: 217px;
   }
+  .cart-container {
+    font-size: 1.3em;
+    margin-left: 65px;
+  }
 }
 
 @media only screen and (min-width: 1366px) {
@@ -668,6 +672,10 @@ footer .text-footer {
   }
   .avatar-img {
     margin-left: 400px;
+  }
+  #description, .addBtn {
+    margin-left: 175px;
+    width: 620px;
   }
 }
 

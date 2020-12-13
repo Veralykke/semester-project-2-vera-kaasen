@@ -12,6 +12,8 @@
     <script type="module" src="js/add.js"></script>
     <script type="module" src="js/script.js"></script>
     <title>Admin</title>
+
+
 </head>
 
 <body>
@@ -56,8 +58,10 @@
                     <label for="description">Description</label>
                     <textarea id="description"></textarea>
                 </div>
-                <input type="checkbox" id="featured">
-                <input type="text" id="image_url">
+                <div class="inlineplz">
+                    <label>Featured yes/no</label><input type="checkbox" id="featured">
+                </div>
+                <input type="text" placeholder="Image URL" id="image_url">
 
                 <input id="id" type="hidden" />
 
@@ -93,5 +97,7 @@
         <a href="/">Terms & Conditions</a>
     </footer>
 </body>
+
+
 
 </html>
